@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X_UA_Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Project 6</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/genome" type="text/css"/>
+	<link href="../../public/css/practiceAppStyles.css" rel="stylesheet">
+	<link rel="icon" href="http://www.clker.com/cliparts/z/f/q/Z/z/d/spaceship-md.png">
+</head>
+
+<body>
+	<div class="dropdown">
+		<input type="image" src="http://icon-icons.com/icons2/665/PNG/128/asteroid_icon-icons.com_60284.png" onclick="dropdown()" class="dropbtn"/>
+		<div id="myDropdown" class="dropdownContent">
+			<a> Click a Link! </a>
+			<a href="home.html">Home</a>
+			<a href="project1.html">Project 1</a>
+			<a href="project2.html">Project 2</a>
+			<a href="project3.html">Project 3</a>
+			<a href="project4.html">Project 4</a>
+			<a href="project5.html">Project 5</a>
+			<a href="project6.html">Project 6</a>
+			<a href="project7.html">Project 7</a>
+			<a href="project8.html">Project 8</a>
+			<a href="../index.html">My Website</a>
+		</div>
+	</div>
+	<script src="../../public/js/dropdownMenu.js"></script>
+	
+	<header id="top" class="header">
+		<div class="text-vertical-center">
+			<h1>Project 6</h1>
+			<h2>Dodge the Meteors!</h2>
+		</div>
+	</header>
+
+	<button class="center btn" onclick="startGame()">Click to Start</button>
+	<div id="sliderDiv">
+		<input type="range" id="slider" min="1" max="5" value="2" 
+			onchange="updateSlider()"> 
+		<p id="sliderValue">Level 2</p>
+	</div>
+	<script src="../../public/js/meteorGame.js"></script>
+
+</body>
+</html>
