@@ -11,20 +11,27 @@ body {
 	color: white;
 	margin: 0px;
 	height: 5vw;
+	width: 100%;
 }
 #navbar a {
 	font-family: Impact;
 	font-size:3vw;
 	padding: .5vw;
+	padding-left: 1vw;
+	padding-right: 1vw;
 }
 .navbutton {
 	margin:0px;
 	height: 5vw;
+	width: 25%;
 	background-color: white; 
 	color: #07167a;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     float:left;
+    text-align: center;
+    border: 1px;
+    border-style: solid;
 }
 .navbutton:hover {
 	background-color: #008CBA; 

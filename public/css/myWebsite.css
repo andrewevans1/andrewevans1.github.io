@@ -21,6 +21,7 @@ body {
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     float:left;
+    width: 20vw;
 }
 .navbutton:hover {
 	background-color: #008CBA; 
@@ -43,9 +44,14 @@ h1 {
 	padding: 0 0 0.2vw; 
 	border-bottom: double #5b5b5b;
 }
+#intro h1{
+	color: #07167a;
+}
 h2 {
 	font-family: 'Oswald', sans-serif;
 	font-size: 3vw;
+	padding-right: 2.5vw;
+	padding-left: 2.5vw;
 }
 #main {
 	width: 100%;
@@ -101,7 +107,17 @@ aside {
 	padding: 2.5vw;
 	padding-top: 0.5vh;
 	float: right;
-	background: #008CBA;
+	background: #07167a;
+	color: white;
 	border: 10px;
-	height: 15vh;
+	min-height: 20vh;
+}
+aside a {
+	font-family: impact;
+	font-size: 2vw;
+	padding: 0;
+
+}
+#content {
+	min-height: 25vh;
 }
