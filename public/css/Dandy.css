@@ -98,24 +98,45 @@ h2 {
 	width: 80%;
 	margin: 0px auto;
 }
+#intro {
+	width: 85%;
+	margin: auto;
+}
 figure {
 	width: 65%;
-	margin: auto;
+	margin: 10px auto;
+	background-color: #07167a;
+	padding: 7.5px;
+}
+figure img {
+	height: 30vh;
+
 }
 figcaption {
 	font-family: 'Yanone Kaffeesatz', ‘Lucida Grande’, sans-serif;
 	font-size: 3.5vw;
+	color: white;
 }
 #footer {
 	text-align:left;
 	background-color: #07167a;
 	color: white;
+	height: 10vw;
 	margin: 0px;
+	padding: 3px;
 }
-#footer a {
+#footer * {
+	display: inline-block;
+}
+#footer p {
 	font-family: 'Oswald', sans-serif;
-	font-size:3.5vw;
-	padding: 5px;
+	font-size:5vw;
+	padding-left: 1.5vw;
+	padding-right: 1vw;
+	margin: auto;
+}
+#footer img {
+	height: 7vw;
 }
 .grad {
   background: red; /* For browsers that do not support gradients */
@@ -206,8 +227,16 @@ figcaption {
 		width: 65%;
 		margin: 0px auto;
 	}
-	#footer a {
+	#intro {
+		width: 70%;
+	}
+	#footer {
+		height: 4vw;
+	}
+	#footer p {
 		font-size:2.25vw;
-		padding: 5px;
+	}
+	#footer img {
+		height: 3vw;
 	}
 }
