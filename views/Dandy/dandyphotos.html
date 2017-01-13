@@ -8,6 +8,7 @@
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	    <link rel="stylesheet" type="text/css" href="../../public/css/Dandy.css">
+	    <link href="https://fonts.googleapis.com/css?family=Oswald|Yesteryear|Yanone+Kaffeesatz" rel="stylesheet">
 		
 		<meta charset="utf-8">
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,6 +19,16 @@
 		<link rel='stylesheet' href='../../public/unitegallery/css/unite-gallery.css' type='text/css' />
 		
 		<script type='text/javascript' src='../../public/unitegallery/themes/tiles/ug-theme-tiles.js'></script>
+		
+		<script src='../../public/js/cloudinary/jquery.ui.widget.js' type='text/javascript'></script>
+		<script src='../../public/js/cloudinary/jquery.iframe-transport.js' type='text/javascript'></script>
+		<script src='../../public/js/cloudinary/jquery.fileupload.js' type='text/javascript'></script>
+		<script src='../../public/js/cloudinary/jquery.cloudinary.js' type='text/javascript'></script>
+
+		<script>
+		$.cloudinary.config({ cloud_name: 'dluv1cbap', api_key: '694152244965438'})
+
+		</script>
 	</head>
 
 	<body id="dandyphotos">
@@ -31,6 +42,8 @@
 		</div>
 
 		<div id="header">
+			<a href="dandyphotos.hbs" class="navbutton">To Experiemntal Photo Gallery</a>
+			<br/>
 			<h1>Dan and Andy</h1>
 			<p>Here's our photo Gallery featuring all the <span class="cute">cute couple photos</span> we take!</p>
 		</div>
@@ -95,9 +108,8 @@
 					<input type='file' name='fileName' id='name' placeholder='Image Item' required/><br>
 					<input type=submit id='subBtn' value='Upload Picture'/>
 				</form>
-				<!--
-				<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script> -->
-				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+				<input name="file" type="file" class="cloudinary-fileupload" data-cloudinary-field="image_id" data-form-data=" ... html-escaped JSON data ... " />
 				<!-- <script type="text/javascript" src="js/dandy.js"></script> -->
 			</div>
 		</div>

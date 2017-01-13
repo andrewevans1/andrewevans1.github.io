@@ -110,7 +110,7 @@ aside {
 	background: #07167a;
 	color: white;
 	border: 10px;
-	min-height: 20vh;
+	height: 35vh;
 }
 aside a {
 	font-family: impact;
@@ -119,5 +119,5 @@ aside a {
 
 }
 #content {
-	min-height: 25vh;
+	min-height: 40vh;
 }

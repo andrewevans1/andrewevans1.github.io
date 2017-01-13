@@ -7,17 +7,46 @@
 
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	    <link rel="stylesheet" type="text/css" href="../public/css/Dandy.css">
+	    <link rel="stylesheet" type="text/css" href="../../public/css/Dandy.css">
 		
 		<meta charset="utf-8">
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <!-- javascript extension from unitegallery -->
-	  	<script type='text/javascript' src='../public/unitegallery/js/jquery-11.0.min.js'></script>	
-		<script type='text/javascript' src='../public/unitegallery/js/unitegallery.min.js'></script>	
-		<link rel='stylesheet' href='../public/unitegallery/css/unite-gallery.css' type='text/css' />
+	  	<script type='text/javascript' src='../../public/unitegallery/js/jquery-11.0.min.js'></script>	
+		<script type='text/javascript' src='../../public/unitegallery/js/unitegallery.min.js'></script>	
+		<link rel='stylesheet' href='../../public/unitegallery/css/unite-gallery.css' type='text/css' />
 		
-		<script type='text/javascript' src='../public/unitegallery/themes/tiles/ug-theme-tiles.js'></script>
+		<script type='text/javascript' src='../../public/unitegallery/themes/tiles/ug-theme-tiles.js'></script>
+		<script src="https://widget.cloudinary.com/global/all.js"></script>
+		<script>
+		$(() => {
+			let imageContainer = $('#imageContainer')
+			let filePicker = $('#uploadFile')
+
+			filePicker.on('click', function(evt) {
+				cloudinary.openUploadWidget({
+					cloud_name:'dluv1cbap',
+					upload_preset: 'pzjvfhly'
+				}, (error, result) => {
+					if (!error) {
+						let tmp = ''
+						var picture = document.createElement('img')
+						picture.src = "${img.url}"
+						imageContainer.appendChild(picture)
+						console.log('uploaded')
+						
+						//updateFeed(userPic, tmp)
+						//sendMessage(tmp);
+					}
+					else {
+						console.log("error?")
+					}
+				})
+			})
+		})
+		</script>
+
 	</head>
 
 	<body id="dandyphotos">
@@ -42,8 +71,8 @@
 
 
 				    <img alt="layingBack"
-				     src="https://github.com/andrewevans1/andrewevans1.github.io/blob/master/images/layingBack.JPG?raw=true"
-				     data-image="https://github.com/andrewevans1/andrewevans1.github.io/blob/master/images/layingBack.JPG?raw=true"
+				     src="https://github.com/andrewevans1/andrewevans1.github.io/blob/master/views/Dandy/images/layingBack.JPG?raw=true"
+				     data-image="https://github.com/andrewevans1/andrewevans1.github.io/blob/master/views/Dandy/images/layingBack.JPG?raw=true"
 		     		 data-description="Laying Back"
 				     style="display:none">
 				     {{/each}}
@@ -56,15 +85,16 @@
 					});
 				</script>
 			</div>
+			<div id="imageContainer">
+				<p>Image should appear here...</p>
+			</div>
 
 			<div id="imageUpload">
-				<form action='/create' method='POST'>
+				<form>
 					<input type='file' name='fileName' id='name' placeholder='Image Item' required/><br>
-					<input type=submit id='subBtn' value='Upload Picture'/>
+					<input type=submit id='uploadFile' value='Upload Picture'/>
 				</form>
-				<!--
-				<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script> -->
-				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+				
 				<!-- <script type="text/javascript" src="js/dandy.js"></script> -->
 			</div>
 		</div>
