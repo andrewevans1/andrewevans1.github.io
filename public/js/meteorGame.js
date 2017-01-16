@@ -1,5 +1,7 @@
 var highScore = 0
 var canvasExists = false
+var paused = true
+var firstPress = true
 
 function startGame(){
     console.log("something happened")
@@ -32,7 +34,24 @@ function startGame(){
         mouseX = evt.clientX - rect.left
         mouseY = evt.clientY - rect.top
         }, false);
-        
+    
+    document.addEventListener("keydown", function(event) {
+        console.log(event.key)
+        if(event.key == 'q'){
+            if(firstPress){
+                paused = true
+                ctx.font = '64pt Genome'
+                ctx.fillStyle = 'red'
+                ctx.fillText('PAUSED', W/2 - 190, 275)
+                firstPress = false
+            }
+            else{
+                paused = false
+                firstPress = true
+            }
+        }
+    })
+
     //stars
     var max = document.getElementById('slider').value * 6
     var scale = 12
@@ -46,8 +65,6 @@ function startGame(){
         })
         console.log(stars[i])
     }
-
-    var paused = true
 
     let timer = 3
     countdown(canvas, timer)
@@ -169,7 +186,7 @@ function startGame(){
     function countdown(canvas, timer) {
         ctx.font = '64pt Genome'
         ctx.fillStyle = 'red'
-            setInterval(function() {
+            var countdownRunning = setInterval(function() {
                 if(timer>0){
                     ctx.clearRect(0,0,W,H)
                     ctx.fillText(timer, W/2, H/2)
@@ -177,6 +194,7 @@ function startGame(){
                 }
                 else{
                     paused = false
+                    clearInterval(countdownRunning)
                 }
             }, 950)
     }
@@ -190,8 +208,8 @@ function startGame(){
     function endGame(canvas, message) {
         ctx.font = '64pt Genome'
         ctx.fillStyle = 'red'
-        ctx.fillText(message, W/2 - 240, 250)
-    }
+        ctx.fillText(message, W/2 - 240, 275)
+    }  
 
     //loop animation
     let isRunning = setInterval(draw, 20)
