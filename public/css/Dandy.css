@@ -74,7 +74,9 @@ h1 {
 }
 .item img {
 	max-height: 50vh;
+	min-height: 50vh;
 	margin: auto;
+	object-fit: cover;
 }
 .carousel-control {
 	width:16%;
