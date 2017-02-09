@@ -139,6 +139,7 @@ figcaption {
 }
 #footer img {
 	height: 7vw;
+	margin-bottom: 1vw;
 }
 .grad {
   background: red; /* For browsers that do not support gradients */
