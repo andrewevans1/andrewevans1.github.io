@@ -9,7 +9,7 @@
 
 	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/genome" type="text/css"/>
 	<link href="../../public/css/practiceAppStyles.css" rel="stylesheet">
-	<link rel="icon" href="http://www.clker.com/cliparts/z/f/q/Z/z/d/spaceship-md.png">
+	<link rel="icon" href="spaceship.png">
 </head>
 
 <body>
@@ -37,12 +37,33 @@
 			<h1>Project 9</h1>
 			<h2>Vector Fields!</h2>
 			<input type="button" value="Start Vortex" class="btn inline" onclick="vortex()">
+			<input type="button" value="Start Collapse" class="btn inline" onclick="collapse()">
+			<input type="button" value="Start Trig Field" class="btn inline" onclick="trig()">
 			<input type="button" value="Pause" class="btn inline" onclick="stop()">
+			
 			<br>
-			<input type="range" id="timeSlider" min="1" max="250" value="10" onchange="updateTimeSlider()"> 
-			<p id="timeSliderValue">Refresh Rate: 10</p>
-			<input type="range" id="scaleSlider" min="1" max="250" value="25" onchange="updateScaleSlider()"> 
-			<p id="scaleSliderValue">Speed Scale: 25</p>
+			<table>	
+				<tr>
+					<td>
+						<input type="range" id="timeSlider" min="1" max="250" value="10" onchange="updateTimeSlider()"> 
+						<p id="timeSliderValue">Refresh Rate: 10</p>
+					</td>
+					<td>
+						<input type="range" id="scaleSlider" min="1" max="250" value="25" onchange="updateScaleSlider()"> 
+						<p id="scaleSliderValue">Speed Scale: 25</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="range" id="numberSlider" min="1" max="50" value="5" onchange="updateNumberSlider()"> 
+						<p id="numberSliderValue">Number of Elements: 5</p>
+					</td>
+					<td>
+						<input type="range" id="sizeSlider" min="1" max="25" value="10" onchange="updateSizeSlider()"> 
+						<p id="sizeSliderValue">Size Scale of Elements: 10</p>
+					</td>
+				</tr>
+			</table>
 		</div>
 	</header>
 

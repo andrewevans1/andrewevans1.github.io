@@ -244,3 +244,8 @@ canvas {
 .floatLeft {
   float: left;
 }
+
+table {
+  margin: auto;
+  padding: 5px;
+}

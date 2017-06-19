@@ -1,6 +1,7 @@
 body {
 	margin:0px;
 	background-color:white;
+	font-family: 'Bad Script', cursive;
 }
 #navbar {
 	text-align:right;
@@ -10,37 +11,38 @@ body {
 	width: 100%;
 }
 #navbar a {
-	font-family: impact;
 	font-size: 5vw;
+	padding-bottom: 0.5vw;
 }
 .navbutton {
 	margin:0px;
 	height: 8vw;
 	background-color: white; 
-	color: #07167a;
+	color: #0e8e3d;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     float:left;
-    width: 50%;
+    width: 20%;
     border: 1px;
     border-style: solid;
 }
 .navbutton:hover {
-	background-color: #008CBA; 
+	background-color: #0e8e3d; 
 	color: white;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 #header {
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Tangerine', cursive;
 	text-align: center;
-	background-color: #07167a;
+	background-color: #098235;
 	color: white;
 	margin: 0px;
 	padding: 5px;
+	font-size: 10vw;
 }
 h1 {	
 	color: white; 
-	font-size: 10vw; 
+	font-size: 14vw; 
 	font-weight: 100;  
 	letter-spacing: 1px; 
 	padding: 0 0 0.2vw; 
@@ -48,10 +50,14 @@ h1 {
 	border-bottom-color: white; 
 }
 #intro h1{
-	color: #07167a;
+	color: #0e8e3d;
+}
+.emphasis {
+	font-size: 7vw;
+	font-style: italic;
+	font-weight: bold;
 }
 h2 {
-	font-family: 'Oswald', sans-serif;
 	font-size: 6vw;
 	padding-right: 2.5vw;
 	padding-left: 2.5vw;
@@ -59,11 +65,10 @@ h2 {
 #main {
 	width: 100%;
 	text-align: center;
-	color: #07167a;
+	color: ##0e8e3d;
 	margin: 0px auto;
 }
 #main p {
-	font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;
 	font-size:4vw;
 }
 #about {
@@ -75,7 +80,7 @@ h2 {
 }
 #footer {
 	text-align:center;
-	background-color: #07167a;
+	background-color: #098235;
 	color: white;
 	margin: 0px;
 	padding: 1.5vw;
@@ -101,18 +106,12 @@ h2 {
     transition-duration: 0.4s;
 }
 .button:hover {
-	background-color: #008CBA; 
+	background-color: #0e8e3d; 
 	color: white;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
-#upload-input {
-	display: none;
-}
-#projects {
-	height: 50vh;
-	margin-bottom: 1vh;
-}
 aside {
+	position: relative;
 	padding: 2.5vw;
 	padding-top: 0.5vh;
 	float: right;
@@ -124,13 +123,13 @@ aside {
 }
 aside a {
 	font-family: impact;
-	font-size: 4vh;
+	font-size: 4vw;
 	padding: 0;
 }
 .asideButton {
 	margin:0px;
 	margin-bottom: 1.5vh;
-	height: 8vh;
+	height: 8vw;
 	background-color: white; 
 	color: #07167a;
     -webkit-transition-duration: 0.4s; /* Safari */
@@ -156,20 +155,25 @@ aside a {
 	}
 	#navbar a {
 		font-size: 3vw;
-		padding: .5vw;
 	}
 	.navbutton {
 		height: 5vw;
-	    width: 20vw;
+	    width: 20%;
 	}
 	h1 {
-		font-size: 6vw;
+		font-size: 10vw;
 	}
 	h2 {
 		font-size: 3vw;
 	}
+	.emphasis {
+		font-size: 5vw; 	
+	}
 	#main p {
 		font-size:2.2vw;
+	}
+	#header h2{
+		font-size: 6vw;
 	}
 	#about {
 		width: 65%;
@@ -182,13 +186,7 @@ aside a {
 		height: 4vw;
 	}
 	aside {
-		width: 30%;
-		height: 100%;
-	}
-	aside a {
-		font-size: 3vh;
-	}
-	.asideButton {
-		height: 6vh;
+		width: 40%;
+		height: 35vh;
 	}
 }
