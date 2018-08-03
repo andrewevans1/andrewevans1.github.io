@@ -1,69 +1,192 @@
 <!DOCTYPE html>
 <html lang="eng-US">
 	<head>
-		<title>Andrew's Website</title>	  
-		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-		
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+		<title>Andrew's Website</title>
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="../public/js/main.js"></script>
+
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link rel="stylesheet" href="../public/css/animate.css">
-	    <link rel="stylesheet" type="text/css" href="../public/css/myWebsite.css">
-	    
-	    <meta charset="utf-8">
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+	  <link rel="stylesheet" type="text/css" href="../public/css/mainStyles.min.css">
+	  <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald|Roboto" rel="stylesheet">
+
+		<link rel="icon" href="Images/Icons/logo.png">
+		<meta charset="utf-8">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+		<meta name="theme-color" content="#0D2340"/>
 	</head>
 
 	<body>
-		<div id="navbar" class="animatedSlow fadeInDown">
-			<nav>
-				<a href="../index.html"><button class="navbutton">Home</button></a>
-				<a href="projects.html"><button class="navbutton">Projects</button></a>
-			</nav>
+		<div class="page-loader" id="PageLoader">
+			<img class="page-loader__spinner" src="images/Icons/pageSpinner.png" alt="Page spinner">
 		</div>
-
-		<div id="header">
-			<h1 class="animated fadeInDown">Welcome to the projects page!</h1>
-			<h2>Here I'll post different projects I've done. Enjoy!</h2>
-		</div>
-		
-		<div id="main" class="animatedSlow fadeIn">
-			<div id="intro">
-				<h1>Projects!</h1>
-				<p>
-				So what exactly do I mean by projects? Well really anything I make, whether it's art or not, whether it's cool or not. Basically if I like it and am in the mood to share it, it'll end up on here. Or that's the plan anyways.
-				</p>
+		<div id="page-wrapper">
+			<div class="mob-nav__container">
+				<nav class="mob-nav mob-nav--closed" id="MobMenu">
+					<ul id="MobNavMain" data-menu="menu0" class="mob-nav__menu mob-nav__menu--parent">
+						<li class="mob-nav__item">
+							<a href="../index.html" class="mob-nav__link link">Home</a>
+						</li>
+						<li class="mob-nav__item">
+							<button type="button" class="mob-nav__trigger mob-nav__trigger--parent link" data-menu="menu1" onclick="toggleMenu('menu1')">
+								<a href="projects.html" class="link">Projects</a>
+								<svg xmlns="http://www.w3.org/2000/svg" width="15" height="11.4" viewBox="0 0 15 11.4" class="svg-mobile-nav-right">
+									<path d="M0 6.2h12.9l-4.4 4.4.7.8L15 5.7 9.2 0l-.7.7 4.4 4.5H0"></path>
+								</svg>
+							</button>
+						</li>
+						<li class="mob-nav__item">
+							<a href="about.html" class="mob-nav__link link">About Me</a>
+						</li>
+						<li class="mob-nav__item">
+							<a href="resources.html" class="mob-nav__link link">Resources</a>
+						</li>
+					</ul>
+					<ul id="menu1" class="mob-nav__menu mob-nav__menu--children mob-nav__menu--closed" data-parent="MobNavMain" data-menu="menu1">
+						<li class="mob-nav__back">
+							<button type="button" class="mob-nav__trigger mob-nav__trigger--back" onclick="toggleMenu('menu1')">
+								Projects
+								<svg xmlns="http://www.w3.org/2000/svg" width="15" height="11.4" viewBox="0 0 15 11.4" class="svg-mobile-nav-left">
+									<path d="M15 5.2H2.1L6.5.8 5.8 0 0 5.7l5.8 5.7.7-.7-4.4-4.5H15"></path>
+								</svg>
+							</button>
+						</li>
+						<li class="mob-nav__item">
+							<a href="Projects1/home.html" class="mob-nav__link link">Javascript 1</a>
+						</li>
+						<li class="mob-nav__item">
+							<a href="Projects2/home.html" class="mob-nav__link link">Javascript 2</a>
+						</li>
+						<li class="mob-nav__item">
+							<a href="Designs/home.html" class="mob-nav__link link">CSS Designs</a>
+						</li>
+						<li class="mob-nav__item">
+							<a href="engineering/googleAssistant.html" class="mob-nav__link link">Google Assistant Robot</a>
+						</li>
+						<li class="mob-nav__item">
+							<a href="engineering/home.html" class="mob-nav__link link">And the rest...</a>
+						</li>
+					</ul>
+				</nav>
 			</div>
-			<div id="content">
-				<aside id = "links">
-					<p>Web Stuff</p>
-					<a href="PracticeApp/home.html"><button class="asideButton">JavaScript Projects</button></a>
-					<a href="Projects2/index.html"><button class="asideButton">JavaScript Projects Pt. II</button></a>
-					<!--<a href="Dandy/index.html"><button class="asideButton">Dandy!</button></a>-->
-					<a href="Designs/design2.html"><button class="asideButton">CSS Styles!</button></a>
-				</aside>
-				<div id="projects">
-					<figure>
-						<img src="Images/bird3DPrint.JPG">
-						<figcaption>Traced a nice picture of a bird in Solidworks, then varied the heights of features to create a piece of raised art.</figcaption>
-					</figure>
-					<br>
-					<figure>
-						<img src="Images/bspace3DPrint.JPG">
-						<figcaption>As a trial print on my new 3D printer, I made a little toy version of my club's logo (<a href="bruinspace.com">bruinspace.com</a>).</figcaption>
-					</figure>
-					<br>
-					<figure>
-						<img src="Images/blueDawnCAD.JPG">
-						<figcaption>Working on Project Rapid's Blue Dawn mission as chief engineer, I designed our custom, lightweight chassis amongst other things. Here's a CAD model (note it is still a work in progress).</figcaption>
-					</figure>
-				</div>
+			<div class="main-wrap">
+				<header class="site-header animated fadeIn" id="SiteHeader" role="banner">
+					<a class="brand" href="../index.html">
+						<img src="images/Icons/logo.png">
+					</a>
+					<nav class="site-nav" role="navigation">
+						<ul class="site-nav__list">
+							<li class="site-nav__item">
+								<a href="../index.html" class="site-nav__link site-nav__link--link">Home</a>
+							</li>
+							<li class="site-nav__item site-nav__item--parent">
+								<p class="site-nav__item site-nav__link site-nav__link--link">Projects</p>
+								<ul class="site-nav__dropdown" >
+									<li class="site-nav__dropdown-item">
+										<a class="site-nav__dropdown-link" href="Projects1/home.html">Javascript 1</a>
+									</li>
+									<li class="site-nav__dropdown-item">
+										<a class="site-nav__dropdown-link" href="Projects2/home.html">Javascript 2</a>
+									</li>
+									<li class="site-nav__dropdown-item">
+										<a class="site-nav__dropdown-link" href="Designs/home.html">CSS Designs</a>
+									</li>
+									<li class="site-nav__dropdown-item">
+										<a class="site-nav__dropdown-link site-nav__dropdown-link--link" href="engineering/googleAssistant.html">Google Assistant Robot</a>
+									</li>
+									<li class="site-nav__dropdown-item">
+										<a class="site-nav__dropdown-link site-nav__dropdown-link--link" href="engineering/home.html">And the rest...</a>
+									</li>
+								</ul>
+							</li>
+							<li class="site-nav__item">
+								<a href="about.html" class="site-nav__link site-nav__link--link">About Me</a>
+							</li>
+							<li class="site-nav__item">
+								<a href="resources.html" class="site-nav__link site-nav__link--link">Resources</a>
+							</li>
+						</ul>
+					</nav>
+					<button class="mob-nav__burger" id="MobMenuToggle" onclick="toggleMobileNav()">
+						<img id="burger" src="images/Icons/burger.png">
+					</button>
+				</header>
+				<main class="animatedSlow fadeIn main-content-wrapper">
+					<div id="intro-wrapper" class="title-container light">
+						<h1 class="animated fadeInDown">Projects!</h1>
+						<h2 class="animatedSlow fadeIn">We've got javascript widgets and games, simple CADs, full engineering system designs, and some sample css designs for you artsy people out there.</h2>
+					</div>
+					<div id="main-content-wrapper" class="animatedSlow fadeIn">
+						<div id="exposition" class="paragraph-container light-red">
+							<h3>
+							So what exactly do I mean by projects? Well really anything I make, whether it's art or not, whether it's cool or not. Basically if I like it and am in the mood to share it, it'll end up on here. Or that's the plan anyways.
+							</h3>
+						</div>
+						<div id="content">
+							<div id = "links" class="paragraph-container light">
+								<h2>Web Stuff</h2>
+								<a href="Projects1/home.html"><button class="red-button">JavaScript Projects</button></a>
+								<a href="Projects2/home.html"><button class="red-button">JavaScript Projects Pt. II</button></a>
+								<a href="Designs/design2.html"><button class="red-button">CSS Styles!</button></a>
+							</div>
+							<div id="projects">
+								<h1 class="title">Projects with cool pictures</h1>
+								<div class="flex-container">
+									<div class="card">
+										<img src="Images/bird3DPrint.JPG">
+										<div class="card-container">
+											<!-- TODO: put a solidworks or cad logo or something here -->
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101 101" width="88.5" height="80.6" class="svg-dedicated-logo">
+												<path fill="none" stroke="#FFF" d="M9.8 68.5V26.7l40.1 26v45.8z"></path>
+												<path fill="none" stroke="#FFF" d="M49.9 52.7l40-26v41.8L50 99M9.6 26.2L50.1 1l40 25.2"></path>
+											</svg>
+											<h3>A bird!</h3>
+											<h4>Traced a nice picture of a bird in Solidworks, then varied the heights of features to create a piece of raised art.</h4>
+										</div>
+									</div>
+									<div class="card">
+										<img src="Images/bspace3DPrint.JPG">
+										<div class="card-container">
+											<!-- TODO: put a solidworks or cad logo or something here -->
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101 101" width="88.5" height="80.6" class="svg-dedicated-logo">
+												<path fill="none" stroke="#FFF" d="M9.8 68.5V26.7l40.1 26v45.8z"></path>
+												<path fill="none" stroke="#FFF" d="M49.9 52.7l40-26v41.8L50 99M9.6 26.2L50.1 1l40 25.2"></path>
+											</svg>
+											<h3>This thing!</h3>
+											<h4>As a trial print on my new 3D printer, I made a little toy version of my club's logo (<a href="bruinspace.com">bruinspace.com</a>).</h4>
+										</div>
+									</div>
+								</div>
+								<div class="card">
+									<img src="Images/blueDawnCAD.JPG">
+									<div class="card-container">
+										<!-- TODO: put a solidworks or cad logo or something here -->
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101 101" width="88.5" height="80.6" class="svg-dedicated-logo">
+											<path fill="none" stroke="#FFF" d="M9.8 68.5V26.7l40.1 26v45.8z"></path>
+											<path fill="none" stroke="#FFF" d="M49.9 52.7l40-26v41.8L50 99M9.6 26.2L50.1 1l40 25.2"></path>
+										</svg>
+										<h3>MHD!</h3>
+										<h4>Featuring a custom chassis, electronics, and magnetohydrodynamics.</h4>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</main>
+				<script type="text/javascript">
+					document.getElementById("PageLoader").classList.add("loaded");
+				</script>
 			</div>
-			<div id="footer" class="animatedSlow fadeInUp">
-				<a href="https://www.facebook.com/profile.php?id=100011758095244" target="_blank"><img src="Images/facebook_circle.svg"></a>
-				<a href="https://www.instagram.com/andrew_evans_/" target="_blank"><img src="Images/instagram_circle.svg"></a>
-				<a href="https://www.linkedin.com/in/andrew-evans" target="_blank"><img src="Images/linkedin_circle.svg"></a>
-			</div>
+			<footer class="animated fadeInUp social-media-links">
+				<a href="https://www.facebook.com/profile.php?id=100011758095244" target="_blank"><img src="Images/Icons/facebook_circle.svg"></a>
+				<a href="https://www.instagram.com/andrew_evans_/" target="_blank"><img src="Images/Icons/instagram_circle.svg"></a>
+				<a href="https://www.linkedin.com/in/andrew-evans" target="_blank"><img src="Images/Icons/linkedin_circle.svg"></a>
+			</footer>
 		</div>
 	</body>
 </html>
