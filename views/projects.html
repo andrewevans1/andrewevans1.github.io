@@ -23,9 +23,12 @@
 	</head>
 
 	<body>
-		<div class="page-loader" id="PageLoader">
-			<img class="page-loader__spinner" src="Images/Icons/pageSpinner.png" alt="Page spinner">
+		<div class="page-loader" id="PageLoader" class="loaded">
+			<img class="page-loader__spinner" src="Images/Icons/pageSpinnerBlue.png" alt="Page spinner">
 		</div>
+		<script type="text/javascript">
+			document.getElementById("PageLoader").classList.remove("loaded");
+		</script>
 		<div id="page-wrapper">
 			<div class="mob-nav__container">
 				<nav class="mob-nav mob-nav--closed" id="MobMenu">
