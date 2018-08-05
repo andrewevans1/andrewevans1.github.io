@@ -1,0 +1,78 @@
+$accent: #4BED81; /*light green*/
+$accent-2: #D81159; /*red*/
+
+.light-gray {
+    color: $accent;
+}
+.accent {
+  background-color: $accent;
+  color: $accent-2;
+}
+
+/*Page Loader*/
+.page-loader {
+    background-color: $accent;
+}
+
+/*Header Bar*/
+.site-header {
+    border-bottom: 1px solid $accent;
+}
+
+.mob-nav {
+    a {
+      color: $accent
+    }
+}
+a:hover, a:focus a:active {
+  color: $accent;
+}
+
+.mob-nav__link,.mob-nav__trigger {
+    color: $accent;
+}
+.mob-nav__link--active,.mob-nav__link.section,.mob-nav__link:focus,.mob-nav__link:hover,.mob-nav__trigger--active,.mob-nav__trigger.section,.mob-nav__trigger:focus,.mob-nav__trigger:hover{
+    color: $accent;
+    border-color: $accent;
+    box-shadow: 0 0 10px $accent;
+}
+
+.mob-nav__link--active svg,.mob-nav__link.section svg,.mob-nav__link:focus svg,.mob-nav__link:hover svg,.mob-nav__trigger--active svg,.mob-nav__trigger.section svg,.mob-nav__trigger:focus svg,.mob-nav__trigger:hover svg {
+    fill: $accent
+}
+
+.mob-nav__link svg,.mob-nav__trigger svg {
+    fill: $accent;
+}
+.mob-nav__trigger--back {
+    color: $accent;
+}
+
+.site-nav__link:after {
+    background-color: $accent;
+}
+
+.site-nav__link--active,.site-nav__link--section,.site-nav__link:focus,.site-nav__link:hover {
+    color: $accent
+}
+
+div.site-nav__link:focus,div.site-nav__link:hover {
+    color: $accent
+}
+
+.site-nav__dropdown {
+  box-shadow: 2px 1px 1px $accent;
+}
+
+.site-nav__dropdown-link:hover, .site-nav__dropdown-link:focus, .site-nav__dropdown-link:active{
+  color: $accent
+}
+
+.accent-button {
+  background-color: $accent; /* Green */
+  color: $accent-2;
+}
+.accent-button:hover, .accent-button:focus {
+  background-color: $accent-2;
+  color: $accent;
+}

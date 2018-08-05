@@ -1,10 +1,10 @@
 $title-font: 'Montserrat', sans-serif;
 $white: #FFFFFF;
 $black: #000;
-$light-red: #ED6A5A;
+$accent: #ED6A5A; /*light red*/
 $tan: #F4F1BB;
 $off-white: #FFF8EE;
-$navy: #0D2340;
+$accent-2: #0D2340; /*navy*/
 $dark-gray: #252838;
 $light-gray: #D5DDE1;
 $bright-light-blue: #00EBFA;
@@ -23,11 +23,11 @@ $laptop: 1024px;
 }
 .light-gray {
     background-color: $light-gray;
-    color: $light-red;
+    color: $accent;
 }
-.light-red {
-  background-color: $light-red;
-  color: $navy;
+.accent {
+  background-color: $accent;
+  color: $accent-2;
 }
 .left {
   text-align: left;
@@ -45,11 +45,17 @@ body {
     margin:0px;
     font-family: 'Montserrat', sans-serif;
 }
+#page-wrapper {
+  margin: 0px;
+}
 a {
     color: $white;
 }
 a:link {
     text-decoration: none;
+}
+a:hover, a:focus a:active {
+  color: $accent;
 }
 h1 {
   font-size: 5vw;
@@ -71,7 +77,7 @@ h4 {
     left: 0px;
     width: 100vw;
     height: 100vh;
-    background-color: $light-red;
+    background-color: $accent;
     pointer-events: none;
 }
 
@@ -126,7 +132,7 @@ h4 {
     -webkit-justify-content: space-between;
     -moz-box-pack: justify;
     justify-content: space-between;
-    border-bottom: 1px solid $light-red;
+    border-bottom: 1px solid $accent;
 }
 .brand {
     position: relative;
@@ -191,7 +197,7 @@ h4 {
     background-color: $black;
     transition: all .45s cubic-bezier(0.55,0,0.1,1);
     a {
-      color: $light-red
+      color: $accent
     }
 }
 
@@ -275,7 +281,7 @@ h4 {
 
 .mob-nav__link,.mob-nav__trigger {
     font-size: 3vw;
-    color: $light-red;
+    color: $accent;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -300,18 +306,18 @@ h4 {
 }
 
 .mob-nav__link--active,.mob-nav__link.section,.mob-nav__link:focus,.mob-nav__link:hover,.mob-nav__trigger--active,.mob-nav__trigger.section,.mob-nav__trigger:focus,.mob-nav__trigger:hover{
-    color: $light-red;
+    color: $accent;
     outline: none;
-    border-color: $light-red;
-    box-shadow: 0 0 10px $light-red;
+    border-color: $accent;
+    box-shadow: 0 0 10px $accent;
 }
 
 .mob-nav__link--active svg,.mob-nav__link.section svg,.mob-nav__link:focus svg,.mob-nav__link:hover svg,.mob-nav__trigger--active svg,.mob-nav__trigger.section svg,.mob-nav__trigger:focus svg,.mob-nav__trigger:hover svg {
-    fill: $light-red
+    fill: $accent
 }
 
 .mob-nav__link svg,.mob-nav__trigger svg {
-    fill: $light-red;
+    fill: $accent;
     position: absolute;
     top: 50%;
     right: 9pt;
@@ -328,7 +334,7 @@ h4 {
 
 .mob-nav__trigger--back {
     font-weight: 400;
-    color: $light-red;
+    color: $accent;
     text-align: center
 }
 
@@ -412,7 +418,7 @@ h4 {
 .site-nav__link:after {
     content: '';
     height: 2px;
-    background-color: $light-red;
+    background-color: $accent;
     position: absolute;
     bottom: 0;
     width: 0;
@@ -422,7 +428,7 @@ h4 {
 }
 
 .site-nav__link--active,.site-nav__link--section,.site-nav__link:focus,.site-nav__link:hover {
-    color: $light-red
+    color: $accent
 }
 
 .site-nav__link--active:after,.site-nav__link--section:after,.site-nav__link:focus:after,.site-nav__link:hover:after {
@@ -436,13 +442,13 @@ div.site-nav__link {
 }
 
 div.site-nav__link:focus,div.site-nav__link:hover {
-    color: $light-red
+    color: $accent
 }
 
 .site-nav__dropdown {
   display: none;
   background-color: $black;
-  box-shadow: 2px 1px 1px $light-red;
+  box-shadow: 2px 1px 1px $accent;
   list-style: none;
   padding: 1vw;
 }
@@ -470,7 +476,7 @@ div.site-nav__link:focus,div.site-nav__link:hover {
 }
 
 .site-nav__dropdown-link:hover, .site-nav__dropdown-link:focus, .site-nav__dropdown-link:active{
-  color: $light-red
+  color: $accent
 }
 
 
@@ -567,18 +573,18 @@ div.site-nav__link:focus,div.site-nav__link:hover {
   }
 }
 
-.red-button {
-  background-color: $light-red; /* Green */
+.accent-button {
+  background-color: $accent; /* Green */
   border: none;
-  color: $navy;
+  color: $accent-2;
   padding: 1vw 2vh;
   text-align: center;
   text-decoration: none;
   display: inline-block;
 }
-.red-button:hover, .red-button:focus {
-  background-color: $navy;
-  color: $light-red;
+.accent-button:hover, .accent-button:focus {
+  background-color: $accent-2;
+  color: $accent;
 }
 footer {
     width: 100vw;
