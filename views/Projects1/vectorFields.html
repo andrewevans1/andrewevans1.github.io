@@ -4,11 +4,12 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X_UA_Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<meta name="theme-color" content="#a52fe0">
+	
 	<title>Project 9: Vector Fields</title>
 
 	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/genome" type="text/css"/>
-	<link href="../../public/css/practiceAppStyles.css" rel="stylesheet">
+	<link href="../../public/css/projects1.min.css" rel="stylesheet">
 	<link rel="icon" href="spaceship.png">
 </head>
 
@@ -26,12 +27,12 @@
 			<a href="gravitySimulator.html"><span class="primary">Project 6</span><span class="secondary">Gravity Simulator</span></a>
 			<a href="imageGenerator.html"><span class="primary">Project 7</span><span class="secondary">Image Generator</span></a>
 			<a href="liveCharting.html"><span class="primary">Project 8</span><span class="secondary">Live Charting</span></a>
-			<a href="vectorFields.html"><span class="primary">Project 9</span><span class="secondary">Vector Fields</span></a>			
+			<a href="vectorFields.html"><span class="primary">Project 9</span><span class="secondary">Vector Fields</span></a>
 			<a href="../../index.html"><span class="primary">My Website</span><span class="secondary">Back to Main</span></a>
 		</div>
 	</div>
 	<script src="../../public/js/dropdownMenu.js"></script>
-	
+
 	<header id="top" class="header">
 		<div class="text-vertical-center">
 			<h1>Project 9</h1>
@@ -40,26 +41,26 @@
 			<input type="button" value="Start Collapse" class="btn inline" onclick="collapse()">
 			<input type="button" value="Start Trig Field" class="btn inline" onclick="trig()">
 			<input type="button" value="Pause" class="btn inline" onclick="stop()">
-			
+
 			<br>
-			<table>	
+			<table>
 				<tr>
 					<td>
-						<input type="range" id="timeSlider" min="1" max="250" value="10" onchange="updateTimeSlider()"> 
+						<input type="range" id="timeSlider" min="1" max="250" value="10" onchange="updateTimeSlider()">
 						<p id="timeSliderValue">Refresh Rate: 10</p>
 					</td>
 					<td>
-						<input type="range" id="scaleSlider" min="1" max="250" value="25" onchange="updateScaleSlider()"> 
+						<input type="range" id="scaleSlider" min="1" max="250" value="25" onchange="updateScaleSlider()">
 						<p id="scaleSliderValue">Speed Scale: 25</p>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<input type="range" id="numberSlider" min="1" max="50" value="5" onchange="updateNumberSlider()"> 
+						<input type="range" id="numberSlider" min="1" max="50" value="5" onchange="updateNumberSlider()">
 						<p id="numberSliderValue">Number of Elements: 5</p>
 					</td>
 					<td>
-						<input type="range" id="sizeSlider" min="1" max="25" value="10" onchange="updateSizeSlider()"> 
+						<input type="range" id="sizeSlider" min="1" max="25" value="10" onchange="updateSizeSlider()">
 						<p id="sizeSliderValue">Size Scale of Elements: 10</p>
 					</td>
 				</tr>

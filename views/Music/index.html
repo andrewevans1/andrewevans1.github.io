@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X_UA_Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#a52fe0">
+		<title>Music Page</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/genome" type="text/css"/>
+		<link rel="stylesheet" href="../../public/css/animate.css">
+	  <link rel="stylesheet" href="../../public/css/music.min.css">
+	</head>
+	<body>
+		<div id="page-wrapper">
+			<div id="nav-wrapper">
+				<div id="mob-nav">
+				</div>
+				<div class="sidenav">
+					<p id="#home">Home</p>
+					<p id="#music">Music</p>
+					<p id="#info">Info</p>
+					<p id="#contact">Contact</p>
+				</div>
+			</div>
+			<div id="content-wrapper">
+				<div id="home-slide" class="slide active">
+					<h1>Richie Wirz Music</h1>
+					<div id="player2" class="player2">
+					  <div class="header">
+					    <h1>Hello World</h1>
+					    <div>
+					      <button>Prev</button>
+					      <button>Play</button>
+					      <button>Next</button>
+					    </div>
+					  </div>
+					  <div class="body">
+					    <div class="album-art"></div>
+					    <div class="songList">
+					      <button>
+					        <h2>
+					          Title
+					        </h2>
+					        <p>
+					          Artist
+					        </p>
+					      </button>
+					    </div>
+					  </div>
+					</div>
+				</div>
+				<div id="music-slide" class="slide">
+					<h1>Music</h1>
+					<div class="slide-content">
+						<ol class="songList">
+							<div class="songItem">
+								<h3 class="title">Whisper</h3>
+								<div class="progress">
+									<div class="progress-bar">
+										<div id="bar" class="bar"></div>
+									</div>
+									<p id="time" class="time">0:00</p>
+								</div>
+								<p class="artist">Richie Wirz - Gtr/Voice/Piano, Marc Allen-Gtr, Mike Ferrara-Drums, Gary Davenport-Bass</p>
+							</div>
+							<div class="songItem">
+								<h3 class="title">My Angel</h3>
+								<div class="progress">
+									<div class="progress-bar">
+										<div id="bar" class="bar"></div>
+									</div>
+									<p id="time" class="time">0:00</p>
+								</div>
+								<p class="artist">Richie Wirz - Gtr/Voice/Mandolin, Marc Allen-Gtr, Mike Ferrara-Drums, Gary Davenport-Bass</p>
+							</div>
+							<div class="songItem">
+								<h3 class="title">Hartford Cars</h3>
+								<div class="progress">
+									<div class="progress-bar">
+										<div id="bar" class="bar"></div>
+									</div>
+									<p id="time" class="time">0:00</p>
+								</div>
+								<p class="artist">Richie Wirz - Gtr/Voice/Bass</p>
+							</div>
+						</ol>
+					</div>
+				</div>
+				<div id="info-slide" class="slide">
+					<h1>Info</h1>
+					<div class="slide-content">
+						<h2>Purchase EP</h2>
+						<p>The Whisper EP is available for sampling and purchase on
+							<a href="">iTunes</a>,
+							<a href="https://richiewirz.bandcamp.com/">bandcamp</a>,
+							<a href="https://store.cdbaby.com/cd/richiewirz">CD Baby</a>,
+							<a href="https://www.amazon.com/Whisper-EP-Richie-Wirz/dp/B004CYP7OY/ref=sr_1_1?s=dmusic&ie=UTF8&qid=1446013313&sr=1-1-mp3-albums-bar-strip-0&keywords=richie+wirz">Amazon</a>,
+							<a href="https://open.spotify.com/artist/672wpOY3lYiKbrNd0pzkX4">Spotify</a>,
+							<a href="https://soundcloud.com/user-770881589-302057563/sets/richie-wirz-whisper-ep">SoundCloud</a>,
+							and many more.</p>
+						</div>
+				</div>
+				<div id="contact-slide" class="slide">
+					<h1>Contact</h1>
+					<button onclick="myFunc()">CLICK</button>
+					<script type="text/javascript">
+					function myFunc() {
+						$('#content-wrapper').css("scroll-snap-type", "y mandatory")
+					}
+					</script>
+				</div>
+			</div>
+			<div id="floatingPlayer" class="player hidden">
+				<div class="info">
+					<span id="artist" class="artist">Richie Wirz</span>
+					<span id="title" class="name">Whisper</span>
+					<div class="progress">
+						<div class="progress-bar">
+							<div id="bar" class="bar"></div>
+						</div>
+						<p id="time" class="time">0:00</p>
+					</div>
+				</div>
+				<div id="control-panel" class="control-panel">
+					<div class="album-art"></div>
+					<div class="controls">
+						<div id="prev" class="prev"></div>
+						<div id="play" class="play"></div>
+						<div id="next" class="next"></div>
+					</div>
+				</div>
+			</div>
+	    <script type="text/javascript" src="../../public/js/music/player.js"></script>
+			<script type="text/javascript" src="../../public/js/music/main.js"></script>
+		</div>
+	</body>
+</html>
