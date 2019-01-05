@@ -104,11 +104,18 @@ style
 .serif {
   font-family: 'Playfair Display', serif;
 }
-.title h1 {
-  font-size:6em;
-  line-height: 1;
-  font-weight: bold;
-  margin: 0 0 20px 0;
+.title {
+  h1 {
+    font-size:6em;
+    line-height: 1;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+  }
+  &.article {
+    h1 {
+      font-size: 5em;
+    }
+  }
 }
 
 /*
@@ -446,24 +453,27 @@ div.site-nav__link:focus,div.site-nav__link:hover {
 
   .img1 {
     /* could use `object-fit: cover;` on an img, but tricky*/
-    background: url(http://www.wirz.seas.ucla.edu/sites/default/files/styles/width-500/public/205000330.PNG?itok=ml2h2_MQ);
-    background-size: cover;
-
-    grid-column: 2 / span 3;
-    grid-row: 2 / span 2;
-  }
-
-  .img3 {
-    background: url(http://www.wirz.seas.ucla.edu/sites/default/files/styles/width-500/public/222395731.jpg?itok=sBpcq1oA);
+    //background: url(http://www.wirz.seas.ucla.edu/sites/default/files/styles/width-500/public/205000330.PNG?itok=ml2h2_MQ);
+    background: url(../images/mixi.png);
     background-size: cover;
 
     grid-column: 4 / span 3;
     grid-row: 3 / span 3;
   }
 
+  .img3 {
+    //background: url(http://www.wirz.seas.ucla.edu/sites/default/files/styles/width-500/public/222395731.jpg?itok=sBpcq1oA);
+    background: url("../images/in-situ sputtering measurement.png");
+    background-size: cover;
+
+    grid-column: 2 / span 3;
+    grid-row: 2 / span 2;
+  }
+
   .img2 {
     /* https://elements.envato.com/gradient-network-wave-backgrounds-L5PGKP */
-    background: url(http://wirzresearchgroup.com/sites/default/files/images/ocean%20zoom%20hq%20V2.gif);
+    //background: url(http://wirzresearchgroup.com/sites/default/files/images/ocean%20zoom%20hq%20V2.gif);
+    background: url("../images/plasma-material interactions.jpg");
     background-size: cover;
 
     grid-column: 7 / span 2;
@@ -561,4 +571,30 @@ main > .title {
       font-size: 1.2em;
     }
   }
+}
+
+.article-body {
+  //margin: 3vw;
+  padding: 3vw;
+  background-color: $black;
+  color: $white;
+  font-size: 1.2em;
+  .block {
+    .text {
+      clear: none;
+    }
+    .image {
+      padding: 0.5vw;
+      float: right;
+      img {
+        width: 25vw;
+        height: auto;
+      }
+    }
+  }
+  // .block::after {
+  //   content: "";
+  //   clear: both;
+  //   display: table;
+  // }
 }

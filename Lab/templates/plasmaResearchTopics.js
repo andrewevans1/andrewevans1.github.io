@@ -19,7 +19,7 @@ var context = {
         ],
         'description': 'The 3 cm Miniature Xenon Ion (MiXI) thruster, developed by Wirz in 2005, was the first miniature ion thruster to demonstrate stable operation and noteworthy total efficiency at these scales. However, the main performance limitation was the high discharge loss of ~450 eV/ion due to poor primary electron confinement from the magnetic cusp design. The current objective of this project is to design a more efficient discharge for the MiXI thruster using discharge EEDFs and plasma parameter analysis.',
         'picture': 'http://www.wirz.seas.ucla.edu/sites/default/files/styles/width-500/public/205000330.PNG?itok=ml2h2_MQ',
-        'link': ''
+        'link': `${links.plasma}/Design_and_Development_of_a_Miniature_Ring-Cusp_Ion_Thruster.html`
       },
       {
         'title': 'Laser-induced Fluorescence Measurements of Energetic Ions in High Current Hollow Cathodes',

@@ -26,3 +26,14 @@ var links = {
   'icons':    `${localPath}/images/Icons`,
   'favicon':  `${localPath}/images/favicon`,
 };
+
+var people = {
+  'RichardWirz': {
+    'name': 'Richard Wirz',
+    'link': `${links.bios}/richard-wirz.html`,
+  },
+  'RichardWirz': {
+    'name': 'Richard Wirz',
+    'link': `${links.bios}/richard-wirz.html`,
+  }
+}

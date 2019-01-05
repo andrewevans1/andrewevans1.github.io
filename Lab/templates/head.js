@@ -1,7 +1,7 @@
 var context = {
   "main": `${links.css}/design.min.css`,
   "favicon":links.favicon,
-  'theme_color': '#00BBFF'
+  'theme_color': '#003B5C'
 }
 
 var templateScript = Handlebars.templates.head(context);
