@@ -25,6 +25,27 @@ songs = {
 		artists_extended: 'Richie Wirz - Gtr/Voice/Bass',
 		link: 'audio/Tchaikovsky_Rococo_Var_orch.mp3',
 		albumCover: "url('images/album_cover.jpg')"
+	},
+	4: {
+		title: 'Hartford Cars',
+		artist: 'Richie Wirz',
+		artists_extended: 'Richie Wirz - Gtr/Voice/Bass',
+		link: 'audio/Tchaikovsky_Rococo_Var_orch.mp3',
+		albumCover: "url('images/album_cover.jpg')"
+	},
+	5: {
+		title: 'Hartford Cars',
+		artist: 'Richie Wirz',
+		artists_extended: 'Richie Wirz - Gtr/Voice/Bass',
+		link: 'audio/Tchaikovsky_Rococo_Var_orch.mp3',
+		albumCover: "url('images/album_cover.jpg')"
+	},
+	6: {
+		title: 'Hartford Cars',
+		artist: 'Richie Wirz',
+		artists_extended: 'Richie Wirz - Gtr/Voice/Bass',
+		link: 'audio/Tchaikovsky_Rococo_Var_orch.mp3',
+		albumCover: "url('images/album_cover.jpg')"
 	}
 }
 
@@ -41,16 +62,18 @@ class musicPlayer {
 	constructor(songList) {
 		this.songList = songList;
 
+		//functions
 		this.play = this.play.bind(this);
 		this.prev = this.prev.bind(this);
 		this.next = this.next.bind(this);
-		this.showInfo = this.showInfo.bind(this);
+		this.toggleInfo = this.toggleInfo.bind(this);
 		this.updateProgress = this.updateProgress.bind(this);
 		this.updateSong = this.updateSong.bind(this);
 		this.renderSongList = this.renderSongList.bind(this);
 		this.jump = this.jump.bind(this);
 		this.listPlay = this.listPlay.bind(this);
 
+		//html elements
 		this.playBtn = document.getElementById('play');
 		this.prevBtn = document.getElementById('prev');
 		this.nextBtn = document.getElementById('next');
@@ -61,23 +84,30 @@ class musicPlayer {
 		this.infoBar = document.getElementById('info');
 		this.slideBar = document.getElementById('bar');
 
+
+		//variables
 		this.tracks = Object.keys(this.songList).length;
 		this.trackNumber = 1;
 		this.audio = new Audio(songList[this.trackNumber]['link']);
 		this.audio.addEventListener('ended',this.next)
-
 		this.live = false;
 
+		//after construction, create list on html page
 		this.renderSongList()
 	}
 
+	//play or pause music based on last state
 	play() {
-		this.showInfo()
+		this.toggleInfo()
 
 		if(this.live == false){
 			this.audio.play();
 			this.live = true;
 			this.timer = setInterval(this.updateProgress, 1000);
+
+			let element = document.getElementById(`play-pause-${this.trackNumber}`)
+			element.classList.remove("play")
+			element.classList.add("pause")
 		}
 		else{
 			this.audio.pause();
@@ -86,7 +116,7 @@ class musicPlayer {
 		}
 	}
 
-	showInfo(){
+	toggleInfo(){
 		let controlPanelObj = this.controlPanel,
 		infoBarObj = this.infoBar
 		Array.from(controlPanelObj.classList).find(function(element){
@@ -96,28 +126,39 @@ class musicPlayer {
 		Array.from(infoBarObj.classList).find(function(element){
 					return element !== "active" ? infoBarObj.classList.add('active') : 		infoBarObj.classList.remove('active');
 			});
+			for(var key in this.songList) {
+				let element = document.getElementById(`play-pause-${key}`)
+				element.classList.remove("pause")
+				element.classList.add("play")
+			}
 	}
 
 	prev() {
-		this.play();
+		if(this.live){
+			this.play(); //pause old music
+		}
 		this.trackNumber -=1;
 		this.trackNumber < 1 ? this.trackNumber = this.tracks : console.log("in range") ;
-		this.updateSong()
+		this.updateSong();
 		this.play();
 	}
 
 	next() {
-		this.play();
+		if(this.live){
+			this.play(); //pause old music
+		}
 		this.trackNumber +=1;
 		this.trackNumber > this.tracks ? this.trackNumber = 1 : console.log("in range");
-		this.updateSong()
+		this.updateSong();
 		this.play();
 	}
 
 	jump(track) {
-		this.play();
+		if(this.live){
+			this.play(); //pause old music
+		}
 		this.trackNumber = track;
-		this.updateSong()
+		this.updateSong();
 		this.play();
 	}
 
@@ -148,17 +189,7 @@ class musicPlayer {
 		document.getElementById("bar").style.width = `${percent}%`;
 	}
 
-	/*
-	Dynamically load in songs from the songList
-	*/
-	updateDuration(){
-		let duration = this.duration
-		let minutes = Math.floor(duration/60)
-		let seconds = Math.round(duration % 60)
-		seconds = (seconds<10 ? "0" + seconds : seconds);
-
-		document.getElementById(`duration-${this.trackNumber}`).innerHTML = `${minutes}:${seconds}`
-	}
+	//Dynamically load in songs from the songList
 	renderSongList(){
 		for (var key in this.songList) {
 			let song = this.songList[key]
@@ -182,6 +213,16 @@ class musicPlayer {
 			audio.addEventListener('loadedmetadata', this.updateDuration)
 		}
 	}
+	updateDuration(){
+		let duration = this.duration
+		let minutes = Math.floor(duration/60)
+		let seconds = Math.round(duration % 60)
+		seconds = (seconds<10 ? "0" + seconds : seconds);
+
+		document.getElementById(`duration-${this.trackNumber}`).innerHTML = `${minutes}:${seconds}`
+	}
+
+	//handle pressing play from list view
 	listPlay(evt){
 		let target = evt.target
 
@@ -191,12 +232,13 @@ class musicPlayer {
 			let track = id.split("-")[2]
 			console.log(track)
 			this.jump(track)
+			$(target).removeClass("play").addClass("pause")
 		}
 		else {
 			console.log("pause")
 			this.play()
+			$(target).addClass("play").removeClass("pause")
 		}
-		$(target).toggleClass("play").toggleClass("pause")
 	}
 }
 
