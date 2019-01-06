@@ -1,13 +1,3 @@
-// $('#content-wrapper').scroll(function() {
-//     var height = $('#content-wrapper').scrollTop();
-// 		//console.log(height)
-// 		if (height > 700){
-// 			$('#floatingPlayer').addClass("visible").removeClass("hidden")
-// 		}
-// 		else{
-// 			$('#floatingPlayer').addClass("hidden").removeClass("visible")
-// 		}
-// });
 
 /*TODO: figure out scroll snap*/
 $('.sidenav').children().click(function() {
