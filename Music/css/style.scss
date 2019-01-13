@@ -8,7 +8,7 @@ $sidenavwidth: 20vw;
 $mobNavHeight: 160px;
 
 $tablet: 768px;
-$mobile-small: 320px;
+$mobile-small: 375px;
 
 html,body {
 	min-height: 100%;
@@ -163,6 +163,13 @@ html,body {
 		}
 	}
 }
+@media (max-width: $mobile-small) {
+	.slide {
+		h1 {
+			font-size: 2.5rem;
+		}
+	}
+}
 @media (min-width: $tablet) {
 	.slide {
 		scroll-snap-align: start;
@@ -189,14 +196,7 @@ html,body {
 		}
 	}
 }
-@media (min-width: $mobile-small) {
-	.slide {
-		h1 {
-			font-size: 2.5rem;
-		}
-	}
 
-}
 
 #home-slide {
 	padding-top: 1vh;
@@ -494,6 +494,12 @@ html,body {
 			height: 66px;
 			padding: 5px 5px 5px 110px;
 			background-color: rgba(255, 255, 255, 0.6);
+
+			.title-artist-container {
+				width: 100%;
+				max-height: 200px;
+				overflow: visible;
+			}
 
 			.name, .artist {
 				display: block;

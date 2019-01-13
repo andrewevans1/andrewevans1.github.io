@@ -9,42 +9,21 @@ songs = {
 		title: 'Whisper',
 		artist: 'Richie Wirz',
 		artists_extended: 'Richie Wirz - Gtr/Voice/Piano, Marc Allen-Gtr, Mike Ferrara-Drums, Gary Davenport-Bass',
-		link: 'audio/Beethoven_12_Variation.mp3',
+		link: 'audio/01 Whisper.mp3',
 		albumCover: "url('images/album_cover.jpg')"
 	},
 	2: {
 		title: 'My Angel',
 		artist: 'Richie Wirz',
 		artists_extended: 'Richie Wirz - Gtr/Voice/Mandolin, Marc Allen-Gtr, Mike Ferrara-Drums, Gary Davenport-Bass',
-		link: 'audio/Tchaikovsky_Nocturne__orch.mp3',
+		link: 'audio/02 My Angel.mp3',
 		albumCover: "url('images/album_cover.jpg')"
 	},
 	3: {
 		title: 'Hartford Cars',
 		artist: 'Richie Wirz',
 		artists_extended: 'Richie Wirz - Gtr/Voice/Bass',
-		link: 'audio/Tchaikovsky_Rococo_Var_orch.mp3',
-		albumCover: "url('images/album_cover.jpg')"
-	},
-	4: {
-		title: 'Hartford Cars',
-		artist: 'Richie Wirz',
-		artists_extended: 'Richie Wirz - Gtr/Voice/Bass',
-		link: 'audio/Tchaikovsky_Rococo_Var_orch.mp3',
-		albumCover: "url('images/album_cover.jpg')"
-	},
-	5: {
-		title: 'Hartford Cars',
-		artist: 'Richie Wirz',
-		artists_extended: 'Richie Wirz - Gtr/Voice/Bass',
-		link: 'audio/Tchaikovsky_Rococo_Var_orch.mp3',
-		albumCover: "url('images/album_cover.jpg')"
-	},
-	6: {
-		title: 'Hartford Cars',
-		artist: 'Richie Wirz',
-		artists_extended: 'Richie Wirz - Gtr/Voice/Bass',
-		link: 'audio/Tchaikovsky_Rococo_Var_orch.mp3',
+		link: 'audio/03 Hartford Cars.mp3',
 		albumCover: "url('images/album_cover.jpg')"
 	}
 }
@@ -138,7 +117,7 @@ class musicPlayer {
 			this.play(); //pause old music
 		}
 		this.trackNumber -=1;
-		this.trackNumber < 1 ? this.trackNumber = this.tracks : console.log("in range") ;
+		this.trackNumber < 1 ? this.trackNumber = this.tracks : null; //console.log("in range") ;
 		this.updateSong();
 		this.play();
 	}
@@ -148,7 +127,7 @@ class musicPlayer {
 			this.play(); //pause old music
 		}
 		this.trackNumber +=1;
-		this.trackNumber > this.tracks ? this.trackNumber = 1 : console.log("in range");
+		this.trackNumber > this.tracks ? this.trackNumber = 1 : null; //console.log("in range");
 		this.updateSong();
 		this.play();
 	}
