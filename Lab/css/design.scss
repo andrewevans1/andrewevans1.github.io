@@ -573,28 +573,33 @@ main > .title {
   }
 }
 
-.article-body {
-  //margin: 3vw;
-  padding: 3vw;
-  background-color: $black;
-  color: $white;
-  font-size: 1.2em;
-  .block {
-    .text {
-      clear: none;
+.article-wrapper {
+  .title {
+    padding: 10px 20px;
+    h3 {
+      font-size: 2em;
+      font-weight: bold;
     }
-    .image {
-      padding: 0.5vw;
+    img {
       float: right;
+      padding: 1vw;
+      width: 30vw;
+      height: auto;
+    }
+  }
+  .article-body {
+    //margin: 3vw;
+    padding: 3vw;
+    background-color: $black;
+    color: $white;
+    .block {
+      font-size: 1.2em;
       img {
+        float: right;
+        padding: 0.5vw;
         width: 25vw;
         height: auto;
       }
     }
   }
-  // .block::after {
-  //   content: "";
-  //   clear: both;
-  //   display: table;
-  // }
 }

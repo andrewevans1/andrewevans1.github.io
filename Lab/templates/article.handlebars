@@ -1,16 +1,15 @@
-<div class="title article serif">
-  <h1>{{title}}</h1>
-  <h3>{{#each authors}}<a href="{{link}}">{{name}}{{#if @last}}{{else}}, {{/if}}</a>{{/each}}</h3>
-</div>
-<div class="article-body">
-	{{#each blocks}}
-		<div class="block">
-      <div class="text">
-        <p>{{{text}}}</p>
-      </div>
-      <div class="image">
-        <img src="{{picture}}">
-      </div>
-		</div>
-	{{/each}}
+<div class="article-wrapper">
+  <div class="title article serif">
+    <img src="{{title-picture}}">
+    <h1>{{title}}</h1>
+    <h3>{{#each authors}}<a href="{{link}}">{{name}}{{#if @last}}{{else}}, {{/if}}</a>{{/each}}</h3>
+  </div>
+  <div class="article-body">
+  	{{#each blocks}}
+  		<div class="block">
+          <img src="{{picture}}">
+          <p>{{{text}}}</p>
+  		</div>
+  	{{/each}}
+  </div>
 </div>

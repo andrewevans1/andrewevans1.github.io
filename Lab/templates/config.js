@@ -31,9 +31,11 @@ var people = {
   'RichardWirz': {
     'name': 'Richard Wirz',
     'link': `${links.bios}/richard-wirz.html`,
+    'photo': `${links.pictures}/people/richard-wirz.jpg`
   },
   'RichardWirz': {
     'name': 'Richard Wirz',
     'link': `${links.bios}/richard-wirz.html`,
+    'photo': `${links.pictures}/people/richard-wirz.jpg`
   }
 }
