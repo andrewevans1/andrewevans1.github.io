@@ -26,8 +26,13 @@ body {
     background-size: cover;
     font-family: 'B612 Mono', monospace;
     font-style: normal;
+    overflow-y: hidden;
 }
-
+@media screen and (min-width: $tablet) {
+  html, body {
+    overflow-y: scroll;
+  }
+}
 .header {
     display: table;
     position: relative;
