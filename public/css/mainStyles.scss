@@ -44,6 +44,7 @@ body {
     color: $white;
     margin:0px;
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 #page-wrapper {
   margin: 0px;
@@ -570,6 +571,42 @@ div.site-nav__link:focus,div.site-nav__link:hover {
     opacity: 0.5;
     -webkit-transition: all 0.25s ease-in;
     transition: all 0.25s ease-in;
+  }
+}
+
+#websites {
+  display: none;
+}
+@media (min-width: $laptop){
+  #websites {
+    display: block;
+    .flex-container {
+      display: flex;
+      justify-content: space-around;
+      margin: auto;
+      padding: 0 10vw 2vw 10vw;
+
+    }
+  }
+  .phone-iframe-border {
+    padding: 80px 18px 75px 18px;
+    margin: 0 0 10px 0;
+    width: calc(586px/1.7);
+    height: calc(1198px/1.7);
+    display: flex;
+    justify-content: center;
+    background-image: url("../../views/Images/iPhone-6-wireframe.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 33px;
+    .card-container {
+      width: calc(586px/1.7 - 2*18px);
+      height: calc(1198px/1.7 - 80px - 75px);
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 }
 
