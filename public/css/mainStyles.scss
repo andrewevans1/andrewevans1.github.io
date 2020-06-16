@@ -21,6 +21,9 @@ $tablet: 768px;
 $laptop: 1024px;
 $desktop: 1340px;
 
+html, body, #page-wrapper, #main-wrap, main {
+  height: 100%;
+}
 .light {
     background-color: $white;
     color: $black;
@@ -670,7 +673,7 @@ footer {
   grid-template-columns: 15px 66px 85px 35px 25px 20px auto 15px; 
   grid-template-rows: 50px 40px 40px auto 50px 5px 40px 5px 30px 100px 72px 5px 40px 15px;
   overflow: hidden;
-  height: 100vh;
+  height: 100%;
   background-image: url(../../views/Images/andrew_hedge_straight.jpg);
   background-size: cover;
   background-position: center;
@@ -739,7 +742,6 @@ footer {
   #landing-grid {
     grid-template-columns: 50px 66px 115px 25px 20px 140px 10px auto 25px 30px 50px 200px 50px; 
     grid-template-rows: 66px 52px 52px 100px 52px 5px 40px 5px 30px auto 48px 5px 36px 15px;
-    height: 100vh;
   
     #first-name {
       grid-column: 2 / 5;
@@ -783,7 +785,6 @@ footer {
   #landing-grid {
     grid-template-columns: 50px 66px 115px 25px 20px 220px 160px auto 25px 30px 50px 200px 50px; 
     grid-template-rows: 66px 52px 52px 100px 52px 5px 40px 5px 30px auto 48px 5px 36px 15px;
-    height: 100vh;
   
     h1 {
       font-size: 60px;
@@ -811,7 +812,6 @@ footer {
   #landing-grid {
     grid-template-columns: 50px 66px 115px 25px 20px 220px 280px auto 25px 30px 80px 100px 40px 50px; 
     grid-template-rows: 66px 52px 52px 100px 52px 5px 40px 5px 30px auto 48px 5px 36px 15px;
-    height: 100vh;
   
     #degree {
       grid-column: 2 / 8;
@@ -848,7 +848,7 @@ footer {
   grid-template-columns: 15px 40px 90px 25px 20px 30px auto 15px; 
   grid-template-rows: 50px 36px 25px 30px 10px 25px 10px 25px 30px 20px 20px auto 5px auto 15px;
   overflow: hidden;
-  height: 100vh;
+  height: 100%;
   background-image: url(../../views/Images/blackboard2.jpg);
   background-size: cover;
   background-position: center;
@@ -994,7 +994,6 @@ footer {
   #project-grid {
     grid-template-columns: 50px 66px 115px 25px 20px 100px 50px 90px auto 25px 30px 80px 40px 40px 50px; 
     grid-template-rows: 66px 48px 50px 50px 10px 50px 10px 50px 10px 100px 52px 5px 40px 5px 30px auto 48px 5px 36px 15px;
-    height: 100vh;
     #title {
       grid-column: 2 / 5;
       grid-row: 2;
@@ -1045,7 +1044,6 @@ footer {
   #project-grid {
     grid-template-columns: 50px 66px 115px 25px 20px 100px 50px 90px auto 25px 30px 80px 100px 40px 50px; 
     grid-template-rows: 66px 52px 50px 50px 10px 50px 10px 50px 10px 100px 52px 5px 40px 5px 30px auto 48px 5px 36px 15px;
-    height: 100vh;
   
     h1 {
       font-size: 60px;
@@ -1063,8 +1061,6 @@ footer {
   #project-grid {
     grid-template-columns: 50px 66px 115px 25px 20px 100px 50px 90px auto 25px 30px 80px 100px 40px 150px; 
     grid-template-rows: 66px 52px 50px 50px 10px 50px 10px 50px 10px 100px 52px 5px 40px 5px 30px auto 48px 5px 36px 15px;
-    height: 100vh;
-  
 
     h1 {
       font-size: 64px;
