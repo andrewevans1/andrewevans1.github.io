@@ -11,20 +11,19 @@
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link rel="stylesheet" href="../public/css/animate.css">
-	  <link rel="stylesheet" type="text/css" href="../public/css/mainStyles.min.css">
-		<link rel="stylesheet" type="text/css" href="../public/css/colors/blue.min.css">
-	  <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald|Roboto" rel="stylesheet">
+	  	<link rel="stylesheet" type="text/css" href="../public/css/mainStyles.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald|Roboto" rel="stylesheet">
 
 		<link rel="icon" href="Images/Icons/logoBlue.png">
 		<meta charset="utf-8">
-	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 		<meta name="theme-color" content="#5AA3ED"/>
 	</head>
 
 	<body>
 		<div class="page-loader" id="PageLoader" class="loaded">
-			<img class="page-loader__spinner" src="Images/Icons/pageSpinnerBlue.png" alt="Page spinner">
+			<img class="page-loader__spinner" src="Images/Icons/pageSpinnerYellow.png" alt="Page spinner">
 		</div>
 		<script type="text/javascript">
 			document.getElementById("PageLoader").classList.remove("loaded");
@@ -38,7 +37,7 @@
 						</li>
 						<li class="mob-nav__item">
 							<button type="button" class="mob-nav__trigger mob-nav__trigger--parent link" data-menu="menu1" onclick="toggleMenu('menu1')">
-								<a href="projects.html" class="link">Projects</a>
+								<a class="link">Projects</a>
 								<svg xmlns="http://www.w3.org/2000/svg" width="15" height="11.4" viewBox="0 0 15 11.4" class="svg-mobile-nav-right">
 									<path d="M0 6.2h12.9l-4.4 4.4.7.8L15 5.7 9.2 0l-.7.7 4.4 4.5H0"></path>
 								</svg>
@@ -54,7 +53,7 @@
 					<ul id="menu1" class="mob-nav__menu mob-nav__menu--children mob-nav__menu--closed" data-parent="MobNavMain" data-menu="menu1">
 						<li class="mob-nav__back">
 							<button type="button" class="mob-nav__trigger mob-nav__trigger--back" onclick="toggleMenu('menu1')">
-								Projects
+								<a href="projects.html" class="link">Projects Home</a>
 								<svg xmlns="http://www.w3.org/2000/svg" width="15" height="11.4" viewBox="0 0 15 11.4" class="svg-mobile-nav-left">
 									<path d="M15 5.2H2.1L6.5.8 5.8 0 0 5.7l5.8 5.7.7-.7-4.4-4.5H15"></path>
 								</svg>
@@ -69,7 +68,7 @@
 						<li class="mob-nav__item">
 							<a href="Games/games.html" class="mob-nav__link link">Games!</a>
 						</li>
-						<li class="mob-nav__item">
+						<!-- <li class="mob-nav__item">
 							<a href="Designs/home.html" class="mob-nav__link link">CSS Designs</a>
 						</li>
 						<li class="mob-nav__item">
@@ -77,15 +76,12 @@
 						</li>
 						<li class="mob-nav__item">
 							<a href="engineering/home.html" class="mob-nav__link link">And the rest...</a>
-						</li>
+						</li> -->
 					</ul>
 				</nav>
 			</div>
 			<div class="main-wrap">
 				<header class="site-header animated fadeIn" id="SiteHeader" role="banner">
-					<a class="brand" href="../index.html">
-						<img src="Images/Icons/logoBlue.png">
-					</a>
 					<nav class="site-nav" role="navigation">
 						<ul class="site-nav__list">
 							<li class="site-nav__item">
@@ -93,7 +89,7 @@
 							</li>
 							<li class="site-nav__item site-nav__item--parent">
 								<p class="site-nav__item site-nav__link site-nav__link--link"><a href="projects.html">Projects</a></p>
-								<ul class="site-nav__dropdown" >
+								<!-- <ul class="site-nav__dropdown" >
 									<li class="site-nav__dropdown-item">
 										<a class="site-nav__dropdown-link" href="Projects1/home.html">Javascript 1</a>
 									</li>
@@ -104,15 +100,12 @@
 										<a class="site-nav__dropdown-link" href="Games/games.html">Games!</a>
 									</li>
 									<li class="site-nav__dropdown-item">
-										<a class="site-nav__dropdown-link" href="Designs/home.html">CSS Designs</a>
-									</li>
-									<li class="site-nav__dropdown-item">
 										<a class="site-nav__dropdown-link site-nav__dropdown-link--link" href="engineering/googleAssistant.html">Google Assistant Robot</a>
 									</li>
 									<li class="site-nav__dropdown-item">
 										<a class="site-nav__dropdown-link site-nav__dropdown-link--link" href="engineering/home.html">And the rest...</a>
 									</li>
-								</ul>
+								</ul> -->
 							</li>
 							<li class="site-nav__item">
 								<a href="about.html" class="site-nav__link site-nav__link--link">About Me</a>
@@ -123,38 +116,57 @@
 						</ul>
 					</nav>
 					<button class="mob-nav__burger" id="MobMenuToggle" onclick="toggleMobileNav()">
-						<img id="burger" src="Images/Icons/burgerBlue.png">
+						<img id="burger" src="Images/Icons/burgerGold.png">
 					</button>
 				</header>
 				<main class="animatedSlow fadeIn main-content-wrapper">
-					<div id="intro-wrapper" class="title-container light">
-						<h1 class="animated fadeInDown">Projects!</h1>
-						<h2 class="animatedSlow fadeIn">We've got javascript widgets and games, simple CADs, full engineering system designs, and some sample css designs for you artsy people out there.</h2>
+					<div id="project-grid" class="title-container light">
+						<h1 id="title" class="animated fadeInDown">Projects!</h1>
+						<h2 id="website-title">Javascript Projects</h2>
+						<h3 id="website-one"><a href="Projects1/home.html">Part I.</a></h3>
+						<h3 id="website-two"><a href="Projects2/home.html">Part II.</a></h3>
+						<h3 id="engineering-title">Engineering</h3>
+						<a id="cubsat"><div><span>CubSat</span></div></a>
+						<a id="gimbal"><div><span>gimbal</span></div></a>
+						<a id="engine"><div><span>LOx/RP-1 engine</span></div></a>
 					</div>
 					<div id="main-content-wrapper" class="animatedSlow fadeIn">
 						<div id="exposition" class="paragraph-container accent">
 							<h3>
-							So what exactly do I mean by projects? Well really anything I make, whether it's art or not, whether it's cool or not. Basically if I like it and am in the mood to share it, it'll end up on here. Or that's the plan anyways.
+							Since high school I've been building and learning. As the years progressed, my projects have become more complex. 
+							I've made little javascript widgets, done some 3D printing, designed electrical systems, mechanical systems, a micro-satellite, and a rocket engine. 
+							</h3>
+							<h3>
+							There is more to come.
 							</h3>
 						</div>
 						<div id="content">
-							<div id = "links" class="paragraph-container light">
-								<h2>Web Stuff</h2>
-								<a href="Projects1/home.html"><button class="accent-button">JavaScript Projects</button></a>
-								<a href="Projects2/home.html"><button class="accent-button">JavaScript Projects Pt. II</button></a>
-								<a href="Designs/design2.html"><button class="accent-button">CSS Styles!</button></a>
+							<div id="websites" class="light">
+								<div id = "links" class="paragraph-container light">
+									<h2>websites</h2>
+									<a href="Projects1/home.html"><button class="accent-button">JavaScript Projects</button></a>
+									<a href="Projects2/home.html"><button class="accent-button">JavaScript Projects Pt. II</button></a>
+									<a href="Games/games.html"><button class="accent-button">Games!</button></a>
+								</div>
+								<div class="flex-container">
+									<div class="card phone-iframe-border">
+										<div class="card-container">
+											<iframe src="https://richiewirz.com/"></iframe>
+										</div>
+									</div>
+									<div class="card phone-iframe-border">
+										<div class="card-container">
+											<iframe src="https://bruinspace.com/"></iframe>
+										</div>
+									</div>
+								</div>
 							</div>
 							<div id="projects">
 								<h1 class="title">Projects with cool pictures</h1>
 								<div class="flex-container">
-									<div class="card">
+									<!-- <div class="card">
 										<img src="Images/bird3DPrint.JPG">
 										<div class="card-container">
-											<!-- TODO: put a solidworks or cad logo or something here -->
-											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101 101" width="88.5" height="80.6" class="svg-dedicated-logo">
-												<path fill="none" stroke="#FFF" d="M9.8 68.5V26.7l40.1 26v45.8z"></path>
-												<path fill="none" stroke="#FFF" d="M49.9 52.7l40-26v41.8L50 99M9.6 26.2L50.1 1l40 25.2"></path>
-											</svg>
 											<h3>A bird!</h3>
 											<h4>Traced a nice picture of a bird in Solidworks, then varied the heights of features to create a piece of raised art.</h4>
 										</div>
@@ -162,43 +174,32 @@
 									<div class="card">
 										<img src="Images/bspace3DPrint.JPG">
 										<div class="card-container">
-											<!-- TODO: put a solidworks or cad logo or something here -->
-											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101 101" width="88.5" height="80.6" class="svg-dedicated-logo">
-												<path fill="none" stroke="#FFF" d="M9.8 68.5V26.7l40.1 26v45.8z"></path>
-												<path fill="none" stroke="#FFF" d="M49.9 52.7l40-26v41.8L50 99M9.6 26.2L50.1 1l40 25.2"></path>
-											</svg>
 											<h3>This thing!</h3>
 											<h4>As a trial print on my new 3D printer, I made a little toy version of my club's logo (<a href="bruinspace.com">bruinspace.com</a>).</h4>
 										</div>
-									</div>
-								</div>
-								<div class="card">
-									<img src="Images/blueDawnCAD.JPG">
-									<div class="card-container">
-										<!-- TODO: put a solidworks or cad logo or something here -->
-										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101 101" width="88.5" height="80.6" class="svg-dedicated-logo">
-											<path fill="none" stroke="#FFF" d="M9.8 68.5V26.7l40.1 26v45.8z"></path>
-											<path fill="none" stroke="#FFF" d="M49.9 52.7l40-26v41.8L50 99M9.6 26.2L50.1 1l40 25.2"></path>
-										</svg>
-										<h3>MHD!</h3>
-										<h4>Featuring a custom chassis, electronics, and magnetohydrodynamics.</h4>
-									</div>
-								</div>
-							</div>
-							<div id="websites" class="light">
-									<h2 class="paragraph-container">Websites</h2>
-									<div class="flex-container">
-										<div class="card phone-iframe-border">
-											<div class="card-container">
-												<iframe src="https://richiewirz.com/"></iframe>
-											</div>
-										</div>
-										<div class="card phone-iframe-border">
-											<div class="card-container">
-												<iframe src="https://bruinspace.com/"></iframe>
-											</div>
+									</div> -->
+									<div class="card">
+										<img src="Images/blueDawnCAD.JPG">
+										<div class="card-container">
+											<h3>MHD!</h3>
+											<h4>Featuring a custom chassis, electronics, and magnetohydrodynamics.</h4>
 										</div>
 									</div>
+									<div class="card">
+										<img src="Images/URSa bare.JPG">
+										<div class="card-container">
+											<h3>URSa</h3>
+											<h4>3U, 40W CubeSat equipped for electric propulsion missions</h4>
+										</div>
+									</div>
+									<div class="card">
+										<img src="Images/engine_render.JPG">
+										<div class="card-container">
+											<h3>Rocket Engine</h3>
+											<h4>For a LOx/RP-1 mixture, 2000lbf thrust</h4>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -211,6 +212,7 @@
 				<a href="https://www.facebook.com/profile.php?id=100011758095244" target="_blank"><img src="Images/Icons/facebook_circle.svg"></a>
 				<a href="https://www.instagram.com/andrew_evans_/" target="_blank"><img src="Images/Icons/instagram_circle.svg"></a>
 				<a href="https://www.linkedin.com/in/andrew-evans" target="_blank"><img src="Images/Icons/linkedin_circle.svg"></a>
+				<a href="https://github.com/andrewevans1" target="_blank"><img src="Images/Icons/github_circle.png"></a>
 			</footer>
 		</div>
 	</body>
