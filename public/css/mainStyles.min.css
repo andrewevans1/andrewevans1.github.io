@@ -1,5 +1,7 @@
 /*light red*/
 /*navy*/
+html, body, #page-wrapper, #main-wrap, main { height: 100%; }
+
 .light { background-color: #FFFFFF; color: #000; }
 
 .dark { background-color: #000; color: #FFFFFF; }
@@ -205,7 +207,7 @@ footer img { height: 8vw; width: 8vw; padding: 1vw; }
 @media (min-width: 1024px) { footer { max-height: 5vw; }
   footer img { height: 4vw; width: 4vw; padding: .5vw; } }
 
-#landing-grid { padding: 0; display: -ms-grid; display: grid; -ms-grid-columns: 15px 66px 85px 35px 25px 20px auto 15px; grid-template-columns: 15px 66px 85px 35px 25px 20px auto 15px; -ms-grid-rows: 50px 40px 40px auto 50px 5px 40px 5px 30px 100px 72px 5px 40px 15px; grid-template-rows: 50px 40px 40px auto 50px 5px 40px 5px 30px 100px 72px 5px 40px 15px; overflow: hidden; height: 100vh; background-image: url(../../views/Images/andrew_hedge_straight.jpg); background-size: cover; background-position: center; }
+#landing-grid { padding: 0; display: -ms-grid; display: grid; -ms-grid-columns: 15px 66px 85px 35px 25px 20px auto 15px; grid-template-columns: 15px 66px 85px 35px 25px 20px auto 15px; -ms-grid-rows: 50px 40px 40px auto 50px 5px 40px 5px 30px 100px 72px 5px 40px 15px; grid-template-rows: 50px 40px 40px auto 50px 5px 40px 5px 30px 100px 72px 5px 40px 15px; overflow: hidden; height: 100%; background-image: url(../../views/Images/andrew_hedge_straight.jpg); background-size: cover; background-position: center; }
 
 #landing-grid h1, #landing-grid h2, #landing-grid h3 { color: white; margin: 0; padding: 0; text-align: left; text-shadow: -1px -1px 20px #000; }
 
@@ -229,7 +231,7 @@ footer img { height: 8vw; width: 8vw; padding: 1vw; }
 
 #landing-grid #about-link { -ms-grid-column: 2; -ms-grid-column-span: 5; grid-column: 2 / 7; -ms-grid-row: 9; grid-row: 9; background-color: rgba(0, 0, 0, 0.8); z-index: 5; -webkit-transition: 0.75s; transition: 0.75s; }
 
-@media (min-width: 768px) { #landing-grid { -ms-grid-columns: 50px 66px 115px 25px 20px 140px 10px auto 25px 30px 50px 200px 50px; grid-template-columns: 50px 66px 115px 25px 20px 140px 10px auto 25px 30px 50px 200px 50px; -ms-grid-rows: 66px 52px 52px 100px 52px 5px 40px 5px 30px auto 48px 5px 36px 15px; grid-template-rows: 66px 52px 52px 100px 52px 5px 40px 5px 30px auto 48px 5px 36px 15px; height: 100vh; }
+@media (min-width: 768px) { #landing-grid { -ms-grid-columns: 50px 66px 115px 25px 20px 140px 10px auto 25px 30px 50px 200px 50px; grid-template-columns: 50px 66px 115px 25px 20px 140px 10px auto 25px 30px 50px 200px 50px; -ms-grid-rows: 66px 52px 52px 100px 52px 5px 40px 5px 30px auto 48px 5px 36px 15px; grid-template-rows: 66px 52px 52px 100px 52px 5px 40px 5px 30px auto 48px 5px 36px 15px; }
   #landing-grid #first-name { -ms-grid-column: 2; -ms-grid-column-span: 3; grid-column: 2 / 5; -ms-grid-row: 2; grid-row: 2; }
   #landing-grid #last-name { -ms-grid-column: 3; -ms-grid-column-span: 3; grid-column: 3 / 6; -ms-grid-row: 3; grid-row: 3; }
   #landing-grid #engineer { -ms-grid-column: 2; -ms-grid-column-span: 5; grid-column: 2 / 7; -ms-grid-row: 11; grid-row: 11; }
@@ -240,7 +242,7 @@ footer img { height: 8vw; width: 8vw; padding: 1vw; }
   #landing-grid h1 { font-size: 52px; }
   #landing-grid h2 { font-size: 40px; } }
 
-@media (min-width: 1024px) { #landing-grid { -ms-grid-columns: 50px 66px 115px 25px 20px 220px 160px auto 25px 30px 50px 200px 50px; grid-template-columns: 50px 66px 115px 25px 20px 220px 160px auto 25px 30px 50px 200px 50px; -ms-grid-rows: 66px 52px 52px 100px 52px 5px 40px 5px 30px auto 48px 5px 36px 15px; grid-template-rows: 66px 52px 52px 100px 52px 5px 40px 5px 30px auto 48px 5px 36px 15px; height: 100vh; }
+@media (min-width: 1024px) { #landing-grid { -ms-grid-columns: 50px 66px 115px 25px 20px 220px 160px auto 25px 30px 50px 200px 50px; grid-template-columns: 50px 66px 115px 25px 20px 220px 160px auto 25px 30px 50px 200px 50px; -ms-grid-rows: 66px 52px 52px 100px 52px 5px 40px 5px 30px auto 48px 5px 36px 15px; grid-template-rows: 66px 52px 52px 100px 52px 5px 40px 5px 30px auto 48px 5px 36px 15px; }
   #landing-grid h1 { font-size: 60px; }
   #landing-grid h2 { font-size: 48px; }
   #landing-grid h3 { font-size: 36px; }
@@ -248,7 +250,7 @@ footer img { height: 8vw; width: 8vw; padding: 1vw; }
   #landing-grid #resources-link:hover { font-size: 64px; }
   #landing-grid #about-link:hover { font-size: 52px; } }
 
-@media (min-width: 1340px) { #landing-grid { -ms-grid-columns: 50px 66px 115px 25px 20px 220px 280px auto 25px 30px 80px 100px 40px 50px; grid-template-columns: 50px 66px 115px 25px 20px 220px 280px auto 25px 30px 80px 100px 40px 50px; -ms-grid-rows: 66px 52px 52px 100px 52px 5px 40px 5px 30px auto 48px 5px 36px 15px; grid-template-rows: 66px 52px 52px 100px 52px 5px 40px 5px 30px auto 48px 5px 36px 15px; height: 100vh; }
+@media (min-width: 1340px) { #landing-grid { -ms-grid-columns: 50px 66px 115px 25px 20px 220px 280px auto 25px 30px 80px 100px 40px 50px; grid-template-columns: 50px 66px 115px 25px 20px 220px 280px auto 25px 30px 80px 100px 40px 50px; -ms-grid-rows: 66px 52px 52px 100px 52px 5px 40px 5px 30px auto 48px 5px 36px 15px; grid-template-rows: 66px 52px 52px 100px 52px 5px 40px 5px 30px auto 48px 5px 36px 15px; }
   #landing-grid #degree { -ms-grid-column: 2; -ms-grid-column-span: 6; grid-column: 2 / 8; -ms-grid-row: 13; grid-row: 13; background-color: rgba(0, 0, 0, 0.4); }
   #landing-grid h1 { font-size: 64px; }
   #landing-grid h2 { font-size: 48px; }
@@ -257,7 +259,7 @@ footer img { height: 8vw; width: 8vw; padding: 1vw; }
   #landing-grid #resources-link:hover { font-size: 64px; }
   #landing-grid #about-link:hover { font-size: 52px; } }
 
-#project-grid { padding: 0; display: -ms-grid; display: grid; -ms-grid-columns: 15px 40px 90px 25px 20px 30px auto 15px; grid-template-columns: 15px 40px 90px 25px 20px 30px auto 15px; -ms-grid-rows: 50px 36px 25px 30px 10px 25px 10px 25px 30px 20px 20px auto 5px auto 15px; grid-template-rows: 50px 36px 25px 30px 10px 25px 10px 25px 30px 20px 20px auto 5px auto 15px; overflow: hidden; height: 100vh; background-image: url(../../views/Images/blackboard2.jpg); background-size: cover; background-position: center; }
+#project-grid { padding: 0; display: -ms-grid; display: grid; -ms-grid-columns: 15px 40px 90px 25px 20px 30px auto 15px; grid-template-columns: 15px 40px 90px 25px 20px 30px auto 15px; -ms-grid-rows: 50px 36px 25px 30px 10px 25px 10px 25px 30px 20px 20px auto 5px auto 15px; grid-template-rows: 50px 36px 25px 30px 10px 25px 10px 25px 30px 20px 20px auto 5px auto 15px; overflow: hidden; height: 100%; background-image: url(../../views/Images/blackboard2.jpg); background-size: cover; background-position: center; }
 
 #project-grid h1, #project-grid h2, #project-grid h3 { color: black; margin: 0; padding: 0; text-align: left; }
 
@@ -315,7 +317,7 @@ footer img { height: 8vw; width: 8vw; padding: 1vw; }
 
 #project-grid #engine:hover span { display: inline; }
 
-@media (min-width: 768px) { #project-grid { -ms-grid-columns: 50px 66px 115px 25px 20px 100px 50px 90px auto 25px 30px 80px 40px 40px 50px; grid-template-columns: 50px 66px 115px 25px 20px 100px 50px 90px auto 25px 30px 80px 40px 40px 50px; -ms-grid-rows: 66px 48px 50px 50px 10px 50px 10px 50px 10px 100px 52px 5px 40px 5px 30px auto 48px 5px 36px 15px; grid-template-rows: 66px 48px 50px 50px 10px 50px 10px 50px 10px 100px 52px 5px 40px 5px 30px auto 48px 5px 36px 15px; height: 100vh; }
+@media (min-width: 768px) { #project-grid { -ms-grid-columns: 50px 66px 115px 25px 20px 100px 50px 90px auto 25px 30px 80px 40px 40px 50px; grid-template-columns: 50px 66px 115px 25px 20px 100px 50px 90px auto 25px 30px 80px 40px 40px 50px; -ms-grid-rows: 66px 48px 50px 50px 10px 50px 10px 50px 10px 100px 52px 5px 40px 5px 30px auto 48px 5px 36px 15px; grid-template-rows: 66px 48px 50px 50px 10px 50px 10px 50px 10px 100px 52px 5px 40px 5px 30px auto 48px 5px 36px 15px; }
   #project-grid #title { -ms-grid-column: 2; -ms-grid-column-span: 3; grid-column: 2 / 5; -ms-grid-row: 2; grid-row: 2; }
   #project-grid #website-title { -ms-grid-column: 10; -ms-grid-column-span: 5; grid-column: 10 / 15; -ms-grid-row: 3; -ms-grid-row-span: 2; grid-row: 3 / 5; }
   #project-grid #website-one { -ms-grid-column: 11; -ms-grid-column-span: 3; grid-column: 11 / 14; -ms-grid-row: 6; grid-row: 6; }
@@ -328,12 +330,12 @@ footer img { height: 8vw; width: 8vw; padding: 1vw; }
   #project-grid h2 { font-size: 40px; }
   #project-grid h3 { font-size: 30px; } }
 
-@media (min-width: 1024px) { #project-grid { -ms-grid-columns: 50px 66px 115px 25px 20px 100px 50px 90px auto 25px 30px 80px 100px 40px 50px; grid-template-columns: 50px 66px 115px 25px 20px 100px 50px 90px auto 25px 30px 80px 100px 40px 50px; -ms-grid-rows: 66px 52px 50px 50px 10px 50px 10px 50px 10px 100px 52px 5px 40px 5px 30px auto 48px 5px 36px 15px; grid-template-rows: 66px 52px 50px 50px 10px 50px 10px 50px 10px 100px 52px 5px 40px 5px 30px auto 48px 5px 36px 15px; height: 100vh; }
+@media (min-width: 1024px) { #project-grid { -ms-grid-columns: 50px 66px 115px 25px 20px 100px 50px 90px auto 25px 30px 80px 100px 40px 50px; grid-template-columns: 50px 66px 115px 25px 20px 100px 50px 90px auto 25px 30px 80px 100px 40px 50px; -ms-grid-rows: 66px 52px 50px 50px 10px 50px 10px 50px 10px 100px 52px 5px 40px 5px 30px auto 48px 5px 36px 15px; grid-template-rows: 66px 52px 50px 50px 10px 50px 10px 50px 10px 100px 52px 5px 40px 5px 30px auto 48px 5px 36px 15px; }
   #project-grid h1 { font-size: 60px; }
   #project-grid h2 { font-size: 48px; }
   #project-grid h3 { font-size: 36px; } }
 
-@media (min-width: 1340px) { #project-grid { -ms-grid-columns: 50px 66px 115px 25px 20px 100px 50px 90px auto 25px 30px 80px 100px 40px 150px; grid-template-columns: 50px 66px 115px 25px 20px 100px 50px 90px auto 25px 30px 80px 100px 40px 150px; -ms-grid-rows: 66px 52px 50px 50px 10px 50px 10px 50px 10px 100px 52px 5px 40px 5px 30px auto 48px 5px 36px 15px; grid-template-rows: 66px 52px 50px 50px 10px 50px 10px 50px 10px 100px 52px 5px 40px 5px 30px auto 48px 5px 36px 15px; height: 100vh; }
+@media (min-width: 1340px) { #project-grid { -ms-grid-columns: 50px 66px 115px 25px 20px 100px 50px 90px auto 25px 30px 80px 100px 40px 150px; grid-template-columns: 50px 66px 115px 25px 20px 100px 50px 90px auto 25px 30px 80px 100px 40px 150px; -ms-grid-rows: 66px 52px 50px 50px 10px 50px 10px 50px 10px 100px 52px 5px 40px 5px 30px auto 48px 5px 36px 15px; grid-template-rows: 66px 52px 50px 50px 10px 50px 10px 50px 10px 100px 52px 5px 40px 5px 30px auto 48px 5px 36px 15px; }
   #project-grid h1 { font-size: 64px; }
   #project-grid h2 { font-size: 48px; }
   #project-grid h3 { font-size: 36px; } }
