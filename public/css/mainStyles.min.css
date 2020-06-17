@@ -1,6 +1,6 @@
 /*light red*/
 /*navy*/
-html, body, #page-wrapper, #main-wrap, main { height: 100%; }
+html, body, #page-wrapper, .main-wrap, main { height: 100%; }
 
 .light { background-color: #FFFFFF; color: #000; }
 
