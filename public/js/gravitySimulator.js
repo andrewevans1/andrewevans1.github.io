@@ -652,7 +652,7 @@ function gravSimV2() {
 		// calculate accelerations
 		for (var i = 0; i<max; i++){
 			for (var j = 0; j<max; j++){
-				if(j >= i){ // lower left triangle
+				if(j >= i-1){ // lower left triangle
 					dist_x = particles[j].x - particles[i].x
 					dist_y = particles[j].y - particles[i].y
 
@@ -661,14 +661,14 @@ function gravSimV2() {
 
 					//calculate acceleration vectors
 					if (dist != 0){
-						var a = -(particles[i].r) / Math.pow(dist, 2)
+						var a = (particles[i].r*particles[j].r) / Math.pow(dist, 2)/100
 					}
 					else {
 						var a = 0
 					}
 
-					particles[j].a_x += a*Math.cos(theta)
-					particles[j].a_y += a*Math.sin(theta)
+					particles[i].a_x += a*Math.cos(theta)
+					particles[i].a_y += a*Math.sin(theta)
 
 				}
 			}

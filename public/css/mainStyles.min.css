@@ -193,8 +193,13 @@ div.site-nav__link:focus, div.site-nav__link:hover { color: #FFD100; }
 @media (min-width: 1024px) { #websites { display: block; }
   #websites .flex-container { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-pack: distribute; justify-content: space-around; margin: auto; padding: 0 10vw 2vw 10vw; }
   .phone-iframe-border { padding: 80px 18px 75px 18px; margin: 0 0 10px 0; width: calc(586px/1.7); height: calc(1198px/1.7); display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; background-image: url("../../views/Images/iPhone-6-wireframe.jpg"); background-size: cover; background-position: center; border-radius: 33px; }
-  .phone-iframe-border .card-container { width: calc(586px/1.7 - 2*18px); height: calc(1198px/1.7 - 80px - 75px); }
-  .phone-iframe-border .card-container iframe { width: 100%; height: 100%; } }
+  .phone-iframe-border .card-container { width: calc(586px/1.7 - 2*18px); height: calc(1198px/1.7 - 80px - 75px); display: -webkit-box; display: -ms-flexbox; display: flex; }
+  .phone-iframe-border .card-container iframe { width: 100%; height: 100%; }
+  .macbook-border { margin: 0 0 10px 0; width: 80vw; height: calc(80vw * 740/1387); padding: calc(80vw*48/1387) calc(80vw*225/1387) calc(80vw*107/1387) calc(80vw*225/1387); display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; background-color: #FFFFFF; background-image: url("../../views/Images/macbook outline.png"); background-size: contain; background-position: center; }
+  .macbook-border .card-container { width: calc(80vw - 80vw*225/1387 - 80vw*225/1387); height: calc(80vw * 740/1387 - 80vw*48/1387 - 80vw*107/1387); background-color: #000; border: #000; display: -webkit-box; display: -ms-flexbox; display: flex; }
+  .macbook-border .card-container video { width: 100%; }
+  .macbook-border:hover { -webkit-box-shadow: none; box-shadow: none; }
+  .macbook-border:hover img { opacity: 1.0; } }
 
 .accent-button { background-color: #FFD100; /* Green */ border: none; color: #0D2340; padding: 1vw 2vh; text-align: center; text-decoration: none; display: inline-block; }
 

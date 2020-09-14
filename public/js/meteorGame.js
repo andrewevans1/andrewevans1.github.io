@@ -113,17 +113,17 @@ function startGame(){
                 ctx.lineTo(s.x-s.r*5,s.y)
                 ctx.lineTo(s.x, s.y+r2)
                 ctx.fill()
-                ctx. closePath()
-
-                ctx.fillStyle = "red"
-                ctx.beginPath()
-                ctx.moveTo(mouseX+scale/2, mouseY)
-                ctx.lineTo(mouseX+scale, mouseY-scale)
-                ctx.lineTo(mouseX-scale, mouseY)
-                ctx.lineTo(mouseX+scale, mouseY + scale)
-                ctx.lineTo(mouseX +scale/2, mouseY)
-                ctx.fill()
+                ctx.closePath()  
             }
+            ctx.fillStyle = "red"
+            ctx.beginPath()
+            ctx.moveTo(mouseX+scale/2, mouseY)
+            ctx.lineTo(mouseX+scale, mouseY-scale)
+            ctx.lineTo(mouseX-scale, mouseY)
+            ctx.lineTo(mouseX+scale, mouseY + scale)
+            ctx.lineTo(mouseX +scale/2, mouseY)
+            ctx.fill()
+
         update()
         checkCrash()
         showScore()
