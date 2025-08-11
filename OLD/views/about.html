@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="eng-US">
+	<head>
+		<title>Andrew's Website</title>
+		<meta property="og:title" content="Andrew's Website">
+		<meta property="og:description" content="Creative portfolio website for Andrew Evans, featuring various engineering and web development projects from over the years.">
+		<meta property="og:image" content="https://andrewevans1.github.io/views/Images/andrew_hedge_straight.jpg" />
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="../public/js/main.js"></script>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="../public/css/animate.css">
+	  	<link rel="stylesheet" type="text/css" href="../public/css/mainStyles.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald|Roboto" rel="stylesheet">
+
+		<link rel="icon" href="Images/Icons/logoYellow.png">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+		<meta name="theme-color" content="#EDDE5A"/>
+	</head>
+
+	<body>
+		<div class="page-loader" id="PageLoader" class="loaded">
+			<img class="page-loader__spinner" src="Images/Icons/pageSpinnerYellow.png" alt="Page spinner">
+		</div>
+		<script type="text/javascript">
+			document.getElementById("PageLoader").classList.remove("loaded");
+		</script>
+		<div id="page-wrapper">
+			<div class="mob-nav__container">
+				<nav class="mob-nav mob-nav--closed" id="MobMenu">
+					<ul id="MobNavMain" data-menu="menu0" class="mob-nav__menu mob-nav__menu--parent">
+						<li class="mob-nav__item">
+							<a href="../index.html" class="mob-nav__link link">Home</a>
+						</li>
+						<li class="mob-nav__item">
+							<button type="button" class="mob-nav__trigger mob-nav__trigger--parent link" data-menu="menu1" onclick="toggleMenu('menu1')">
+								<a class="link">Projects</a>
+								<svg xmlns="http://www.w3.org/2000/svg" width="15" height="11.4" viewBox="0 0 15 11.4" class="svg-mobile-nav-right">
+									<path d="M0 6.2h12.9l-4.4 4.4.7.8L15 5.7 9.2 0l-.7.7 4.4 4.5H0"></path>
+								</svg>
+							</button>
+						</li>
+						<li class="mob-nav__item">
+							<a href="about.html" class="mob-nav__link link">About Me</a>
+						</li>
+						<li class="mob-nav__item">
+							<a href="resources.html" class="mob-nav__link link">Resources</a>
+						</li>
+					</ul>
+					<ul id="menu1" class="mob-nav__menu mob-nav__menu--children mob-nav__menu--closed" data-parent="MobNavMain" data-menu="menu1">
+						<li class="mob-nav__back">
+							<button type="button" class="mob-nav__trigger mob-nav__trigger--back" onclick="toggleMenu('menu1')">
+								<a href="projects.html" class="link">Projects Home</a>
+								<svg xmlns="http://www.w3.org/2000/svg" width="15" height="11.4" viewBox="0 0 15 11.4" class="svg-mobile-nav-left">
+									<path d="M15 5.2H2.1L6.5.8 5.8 0 0 5.7l5.8 5.7.7-.7-4.4-4.5H15"></path>
+								</svg>
+							</button>
+						</li>
+						<li class="mob-nav__item">
+							<a href="Projects1/home.html" class="mob-nav__link link">Javascript 1</a>
+						</li>
+						<li class="mob-nav__item">
+							<a href="Projects2/home.html" class="mob-nav__link link">Javascript 2</a>
+						</li>
+						<li class="mob-nav__item">
+							<a href="Games/games.html" class="mob-nav__link link">Games!</a>
+						</li>
+						<!-- <li class="mob-nav__item">
+							<a href="Designs/home.html" class="mob-nav__link link">CSS Designs</a>
+						</li>
+						<li class="mob-nav__item">
+							<a href="engineering/googleAssistant.html" class="mob-nav__link link">Google Assistant Robot</a>
+						</li>
+						<li class="mob-nav__item">
+							<a href="engineering/home.html" class="mob-nav__link link">And the rest...</a>
+						</li> -->
+					</ul>
+				</nav>
+			</div>
+			<div class="main-wrap">
+				<header class="site-header animated fadeIn" id="SiteHeader" role="banner">
+					<nav class="site-nav" role="navigation">
+						<ul class="site-nav__list">
+							<li class="site-nav__item">
+								<a href="../index.html" class="site-nav__link site-nav__link--link">Home</a>
+							</li>
+							<li class="site-nav__item site-nav__item--parent">
+								<p class="site-nav__item site-nav__link site-nav__link--link"><a href="projects.html">Projects</a></p>
+								<!-- <ul class="site-nav__dropdown" >
+									<li class="site-nav__dropdown-item">
+										<a class="site-nav__dropdown-link" href="Projects1/home.html">Javascript 1</a>
+									</li>
+									<li class="site-nav__dropdown-item">
+										<a class="site-nav__dropdown-link" href="Projects2/home.html">Javascript 2</a>
+									</li>
+									<li class="site-nav__dropdown-item">
+										<a class="site-nav__dropdown-link" href="Games/games.html">Games!</a>
+									</li>
+									<li class="site-nav__dropdown-item">
+										<a class="site-nav__dropdown-link" href="Designs/home.html">CSS Designs</a>
+									</li>
+									<li class="site-nav__dropdown-item">
+										<a class="site-nav__dropdown-link site-nav__dropdown-link--link" href="engineering/googleAssistant.html">Google Assistant Robot</a>
+									</li>
+									<li class="site-nav__dropdown-item">
+										<a class="site-nav__dropdown-link site-nav__dropdown-link--link" href="engineering/home.html">And the rest...</a>
+									</li>
+								</ul> -->
+							</li>
+							<li class="site-nav__item">
+								<a href="about.html" class="site-nav__link site-nav__link--link">About Me</a>
+							</li>
+							<li class="site-nav__item">
+								<a href="resources.html" class="site-nav__link site-nav__link--link">Resources</a>
+							</li>
+						</ul>
+					</nav>
+					<button class="mob-nav__burger" id="MobMenuToggle" onclick="toggleMobileNav()">
+						<img id="burger" src="Images/Icons/burgerGold.png">
+					</button>
+				</header>
+				<main class="animatedSlow fadeIn main-content-wrapper">
+					<div id="intro-wrapper" class="title-container light">
+						<h1 class="animated fadeInDown">So you wanna know more about me, eh?</h1>
+						<h2 class="animatedSlow fadeIn">Well buckle in, because you're in for a trip.</h2>
+					</div>
+					<div id="main-content-wrapper" class="animatedSlow fadeIn paragraph-container">
+						<p>< insert interesting things ></p>
+					</div>
+				</main>
+				<script type="text/javascript">
+					document.getElementById("PageLoader").classList.add("loaded");
+				</script>
+			</div>
+			<footer class="animated fadeInUp social-media-links">
+				<a href="https://www.facebook.com/profile.php?id=100011758095244" target="_blank"><img src="Images/Icons/facebook_circle.svg"></a>
+				<a href="https://www.instagram.com/andrew_evans_/" target="_blank"><img src="Images/Icons/instagram_circle.svg"></a>
+				<a href="https://www.linkedin.com/in/andrew-evans" target="_blank"><img src="Images/Icons/linkedin_circle.svg"></a>
+				<a href="https://github.com/andrewevans1" target="_blank"><img src="Images/Icons/github_circle.png"></a>
+			</footer>
+		</div>
+	</body>
+</html>

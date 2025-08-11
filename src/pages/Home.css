@@ -1,0 +1,81 @@
+.Home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.Home.Text {
+  position: relative;
+}
+
+.Home.BubbleContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.Bubble {
+  position: relative;
+  border-radius: 50%;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s;
+  z-index: 2;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 50%;
+  border:3px solid rgba(255,255,255,.5);
+  transition: 1s;
+  background-image:
+    url("data:image/svg+xml;utf8, <svg width='100' height='100' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='50' r='50' fill='none'/><circle cx='24' cy='24' r='7.5' fill='white' /><path d='M78 58.4999C69.5 72.4999 56 78.4999 53.5 80.9999C51 83.4999 50 89.9999 59.5 87.4999C69 84.9999 82.5 76.4999 86.5 67.4999C90.5 58.5 86.5 44.5 78 58.4999Z' fill='rgba(255,255,255,.9)' style='filter:blur(0px)'/></svg>"),
+    radial-gradient(circle at 70% 96%,white .5%, rgba(255,255,200,.4) 2%, transparent 9%) ,
+    radial-gradient( at 30% 20%,white 1%, rgba(255,255,200,1) 2%, transparent 20%,transparent 50%, rgba(0,200,200,.3) 73%,rgba(0,80,80,.3) 84% ),     
+    radial-gradient(circle at 0% 0%,rgba(255,0,255,.7) 2%,transparent 80%);
+  background-size: cover;
+}
+
+.Bubble:hover {
+  transform: scale(1.08);
+  box-shadow:
+    0 8px 32px 0 rgba(0, 0, 0, 0.18),
+    0 0 60px 0 rgba(173, 216, 230, 0.25) inset;
+  /* background: radial-gradient(circle at 40% 40%, #f6fbff 70%, #d5dde1 100%); */
+}
+
+.BubbleContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #333;
+}
+.Bubble:hover > .BubbleContent {
+  /* background-color: rgba(255,0,0, 0.2); */
+  background-color: rgba(255, 255, 255, 0.3);
+  font-size: 1.28rem;
+  transition: background-color 0.3s, font-size 0.3s;
+}
+
+.BubbleContent > * {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+  align-self: center;
+  align-content: center;
+}
